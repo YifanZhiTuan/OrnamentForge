@@ -1,0 +1,17 @@
+{
+  "schema": "PresentationFinishPresetsV1",
+  "version": "2.0.0",
+  "default": "QINGBAI_GLAZE",
+  "presets": {
+    "QINGBAI_GLAZE": {
+      "authoritative_finish": "SOFT_CLOUD_V5",
+      "graph": "soft_cloud_v5.json",
+      "palette_policy": "Use user-approved V5 gray-cyan glaze. No unapproved blue recolor."
+    },
+    "YINGQING_GLAZE": {
+      "authoritative_finish": "SOFT_CLOUD_V5",
+      "graph": "soft_cloud_v5.json",
+      "palette_policy": "Use user-approved V5 gray-cyan glaze. No unapproved blue recolor."
+    }
+  }
+}

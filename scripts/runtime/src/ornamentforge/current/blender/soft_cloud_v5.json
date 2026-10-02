@@ -1,0 +1,3027 @@
+{
+  "source_sha256": "7e423f9998e4fe85182730b13245f8b4c0b55ce12649286520d2291cfeba451c",
+  "material_name": "08_soft_pooling_porcelain_body_glaze_clearcoat",
+  "material": {
+    "nodes": [
+      {
+        "name": "\u539f\u7406\u5316 BSDF",
+        "type": "ShaderNodeBsdfPrincipled",
+        "label": "A porcelain body + B colored glaze + C transparent finish",
+        "properties": {
+          "distribution": "MULTI_GGX",
+          "subsurface_method": "RANDOM_WALK"
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Base Color",
+            "value": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Metallic",
+            "value": 0.0
+          },
+          {
+            "index": 2,
+            "name": "Roughness",
+            "value": 0.25999999046325684
+          },
+          {
+            "index": 3,
+            "name": "IOR",
+            "value": 1.4600000381469727
+          },
+          {
+            "index": 4,
+            "name": "Alpha",
+            "value": 1.0
+          },
+          {
+            "index": 5,
+            "name": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "name": "Weight",
+            "value": 0.0
+          },
+          {
+            "index": 7,
+            "name": "Diffuse Roughness",
+            "value": 0.0
+          },
+          {
+            "index": 8,
+            "name": "Subsurface Weight",
+            "value": 0.08500000089406967
+          },
+          {
+            "index": 9,
+            "name": "Subsurface Radius",
+            "value": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ]
+          },
+          {
+            "index": 10,
+            "name": "Subsurface Scale",
+            "value": 0.017999999225139618
+          },
+          {
+            "index": 11,
+            "name": "Subsurface IOR",
+            "value": 1.399999976158142
+          },
+          {
+            "index": 12,
+            "name": "Subsurface Anisotropy",
+            "value": 0.0
+          },
+          {
+            "index": 13,
+            "name": "Specular IOR Level",
+            "value": 0.3199999928474426
+          },
+          {
+            "index": 14,
+            "name": "Specular Tint",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 15,
+            "name": "Anisotropic",
+            "value": 0.0
+          },
+          {
+            "index": 16,
+            "name": "Anisotropic Rotation",
+            "value": 0.0
+          },
+          {
+            "index": 17,
+            "name": "Tangent",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 18,
+            "name": "Transmission Weight",
+            "value": 0.0
+          },
+          {
+            "index": 19,
+            "name": "Coat Weight",
+            "value": 1.0
+          },
+          {
+            "index": 20,
+            "name": "Coat Roughness",
+            "value": 0.029999999329447746
+          },
+          {
+            "index": 21,
+            "name": "Coat IOR",
+            "value": 1.5
+          },
+          {
+            "index": 22,
+            "name": "Coat Tint",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 23,
+            "name": "Coat Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 24,
+            "name": "Sheen Weight",
+            "value": 0.0
+          },
+          {
+            "index": 25,
+            "name": "Sheen Roughness",
+            "value": 0.5
+          },
+          {
+            "index": 26,
+            "name": "Sheen Tint",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 27,
+            "name": "Emission Color",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 28,
+            "name": "Emission Strength",
+            "value": 0.0
+          },
+          {
+            "index": 29,
+            "name": "Thin Film Thickness",
+            "value": 0.0
+          },
+          {
+            "index": 30,
+            "name": "Thin Film IOR",
+            "value": 1.3300000429153442
+          }
+        ]
+      },
+      {
+        "name": "\u6750\u8d28\u8f93\u51fa",
+        "type": "ShaderNodeOutputMaterial",
+        "label": "Surface only: no displacement",
+        "properties": {},
+        "inputs": [
+          {
+            "index": 2,
+            "name": "Displacement",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "name": "Thickness",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\u7eb9\u7406\u5750\u6807",
+        "type": "ShaderNodeTexCoord",
+        "label": "Object anchored glaze",
+        "properties": {},
+        "inputs": []
+      },
+      {
+        "name": "\u566a\u6ce2\u7eb9\u7406",
+        "type": "ShaderNodeTexNoise",
+        "label": "Broad quiet mineral clouds",
+        "properties": {
+          "noise_dimensions": "3D",
+          "normalize": true
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "W",
+            "value": 0.0
+          },
+          {
+            "index": 2,
+            "name": "Scale",
+            "value": 1.600000023841858
+          },
+          {
+            "index": 3,
+            "name": "Detail",
+            "value": 3.200000047683716
+          },
+          {
+            "index": 4,
+            "name": "Roughness",
+            "value": 0.6000000238418579
+          },
+          {
+            "index": 5,
+            "name": "Lacunarity",
+            "value": 2.0
+          },
+          {
+            "index": 6,
+            "name": "Offset",
+            "value": 0.0
+          },
+          {
+            "index": 7,
+            "name": "Gain",
+            "value": 1.0
+          },
+          {
+            "index": 8,
+            "name": "Distortion",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\u566a\u6ce2\u7eb9\u7406.001",
+        "type": "ShaderNodeTexNoise",
+        "label": "Slow glaze flow warp",
+        "properties": {
+          "noise_dimensions": "3D",
+          "normalize": true
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "W",
+            "value": 0.0
+          },
+          {
+            "index": 2,
+            "name": "Scale",
+            "value": 0.47999998927116394
+          },
+          {
+            "index": 3,
+            "name": "Detail",
+            "value": 2.0
+          },
+          {
+            "index": 4,
+            "name": "Roughness",
+            "value": 0.5
+          },
+          {
+            "index": 5,
+            "name": "Lacunarity",
+            "value": 2.0
+          },
+          {
+            "index": 6,
+            "name": "Offset",
+            "value": 0.0
+          },
+          {
+            "index": 7,
+            "name": "Gain",
+            "value": 1.0
+          },
+          {
+            "index": 8,
+            "name": "Distortion",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\u77e2\u91cf\u8fd0\u7b97",
+        "type": "ShaderNodeVectorMath",
+        "label": "Gentle coordinate flow",
+        "properties": {
+          "operation": "SCALE"
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "name": "Scale",
+            "value": 0.75
+          }
+        ]
+      },
+      {
+        "name": "\u77e2\u91cf\u8fd0\u7b97.001",
+        "type": "ShaderNodeVectorMath",
+        "label": "Warped glaze coordinates",
+        "properties": {
+          "operation": "ADD"
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "name": "Scale",
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "name": "\u566a\u6ce2\u7eb9\u7406.002",
+        "type": "ShaderNodeTexNoise",
+        "label": "Subordinate small mineral clouds: COLOR ONLY",
+        "properties": {
+          "noise_dimensions": "3D",
+          "normalize": true
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "W",
+            "value": 0.0
+          },
+          {
+            "index": 2,
+            "name": "Scale",
+            "value": 16.0
+          },
+          {
+            "index": 3,
+            "name": "Detail",
+            "value": 2.0
+          },
+          {
+            "index": 4,
+            "name": "Roughness",
+            "value": 0.5
+          },
+          {
+            "index": 5,
+            "name": "Lacunarity",
+            "value": 2.0
+          },
+          {
+            "index": 6,
+            "name": "Offset",
+            "value": 0.0
+          },
+          {
+            "index": 7,
+            "name": "Gain",
+            "value": 1.0
+          },
+          {
+            "index": 8,
+            "name": "Distortion",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.7599999904632568
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.001",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.23999999463558197
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.002",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.003",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.8799999952316284
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.004",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.11999999731779099
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.005",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u6620\u5c04\u8303\u56f4",
+        "type": "ShaderNodeMapRange",
+        "label": "Irregular broad and small cloud patches",
+        "properties": {
+          "clamp": true,
+          "interpolation_type": "LINEAR",
+          "data_type": "FLOAT"
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "index": 1,
+            "name": "From Min",
+            "value": 0.30000001192092896
+          },
+          {
+            "index": 2,
+            "name": "From Max",
+            "value": 0.699999988079071
+          },
+          {
+            "index": 3,
+            "name": "To Min",
+            "value": 0.0
+          },
+          {
+            "index": 4,
+            "name": "To Max",
+            "value": 1.0
+          },
+          {
+            "index": 5,
+            "name": "Steps",
+            "value": 4.0
+          },
+          {
+            "index": 6,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "name": "From Min",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "name": "From Max",
+            "value": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 9,
+            "name": "To Min",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "name": "To Max",
+            "value": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 11,
+            "name": "Steps",
+            "value": [
+              4.0,
+              4.0,
+              4.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.006",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.6499999761581421
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.007",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.0
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u6df7\u5408 (\u65e7\u7248)",
+        "type": "ShaderNodeMixRGB",
+        "label": "Cloud glaze optical thickness proxy",
+        "properties": {
+          "blend_type": "MIX",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Factor",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Color1",
+            "value": [
+              0.3762621283531189,
+              0.4507857859134674,
+              0.42869049310684204,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Color2",
+            "value": [
+              0.2541520893573761,
+              0.34670406579971313,
+              0.31854677200317383,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u5c5e\u6027",
+        "type": "ShaderNodeAttribute",
+        "label": "Measured groove depth",
+        "properties": {
+          "attribute_name": "ActualEngravingDepth",
+          "attribute_type": "GEOMETRY"
+        },
+        "inputs": []
+      },
+      {
+        "name": "\u8fd0\u7b97.008",
+        "type": "ShaderNodeMath",
+        "label": "DIVIDE",
+        "properties": {
+          "operation": "DIVIDE",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.014000000432133675
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.009",
+        "type": "ShaderNodeMath",
+        "label": "MINIMUM",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.010",
+        "type": "ShaderNodeMath",
+        "label": "POWER",
+        "properties": {
+          "operation": "POWER",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.800000011920929
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.011",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.9599999785423279
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u5c5e\u6027.001",
+        "type": "ShaderNodeAttribute",
+        "label": "Narrow cavity shoulder glaze spread",
+        "properties": {
+          "attribute_name": "GlazeCavitySpread",
+          "attribute_type": "GEOMETRY"
+        },
+        "inputs": []
+      },
+      {
+        "name": "\u8fd0\u7b97.012",
+        "type": "ShaderNodeMath",
+        "label": "DIVIDE",
+        "properties": {
+          "operation": "DIVIDE",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.014000000432133675
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.013",
+        "type": "ShaderNodeMath",
+        "label": "MINIMUM",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.014",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.7799999713897705
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.015",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.016",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.017",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.018",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.800000011920929
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.019",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.020",
+        "type": "ShaderNodeMath",
+        "label": "MINIMUM",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.9599999785423279
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.021",
+        "type": "ShaderNodeMath",
+        "label": "DIVIDE",
+        "properties": {
+          "operation": "DIVIDE",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.00800000037997961
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.022",
+        "type": "ShaderNodeMath",
+        "label": "MINIMUM",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.023",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.3400000035762787
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.024",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.6800000071525574
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.025",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.026",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.027",
+        "type": "ShaderNodeMath",
+        "label": "MINIMUM",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.8999999761581421
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u6df7\u5408 (\u65e7\u7248).001",
+        "type": "ShaderNodeMixRGB",
+        "label": "Same hue depth-driven pooling, not black outlines",
+        "properties": {
+          "blend_type": "MIX",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Factor",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Color1",
+            "value": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Color2",
+            "value": [
+              0.09084171056747437,
+              0.18782077729701996,
+              0.17144110798835754,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u5c5e\u6027.002",
+        "type": "ShaderNodeAttribute",
+        "label": "Host rim/turning zone",
+        "properties": {
+          "attribute_name": "GlazeRimZone",
+          "attribute_type": "GEOMETRY"
+        },
+        "inputs": []
+      },
+      {
+        "name": "\u8fd0\u7b97.028",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.15000000596046448
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u6df7\u5408 (\u65e7\u7248).002",
+        "type": "ShaderNodeMixRGB",
+        "label": "Slight rim accumulation",
+        "properties": {
+          "blend_type": "MIX",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Factor",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Color1",
+            "value": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Color2",
+            "value": [
+              0.2541520893573761,
+              0.34670406579971313,
+              0.31854677200317383,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.029",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.02500000037252903
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.030",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.06499999761581421
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.031",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.032",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.07500000298023224
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.033",
+        "type": "ShaderNodeMath",
+        "label": "MULTIPLY",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.03500000014901161
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.034",
+        "type": "ShaderNodeMath",
+        "label": "ADD",
+        "properties": {
+          "operation": "ADD",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.25999999046325684
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u5c5e\u6027.003",
+        "type": "ShaderNodeAttribute",
+        "label": "Analytic shallow-host normal, coat only",
+        "properties": {
+          "attribute_name": "GlazeHostNormal",
+          "attribute_type": "GEOMETRY"
+        },
+        "inputs": []
+      },
+      {
+        "name": "\u51e0\u4f55\u6570\u636e",
+        "type": "ShaderNodeNewGeometry",
+        "label": "Underlying engraved normal",
+        "properties": {},
+        "inputs": []
+      },
+      {
+        "name": "\u6df7\u5408 (\u65e7\u7248).003",
+        "type": "ShaderNodeMixRGB",
+        "label": "Optical glaze smoothing, not mesh smoothing",
+        "properties": {
+          "blend_type": "MIX",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Factor",
+            "value": 0.3499999940395355
+          },
+          {
+            "index": 1,
+            "name": "Color1",
+            "value": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Color2",
+            "value": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u77e2\u91cf\u8fd0\u7b97.002",
+        "type": "ShaderNodeVectorMath",
+        "label": "Normalize coating normal",
+        "properties": {
+          "operation": "NORMALIZE"
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "name": "Scale",
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Darker celadon pigment",
+        "type": "ShaderNodeMixRGB",
+        "label": "",
+        "properties": {
+          "blend_type": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Factor",
+            "value": 1.0
+          },
+          {
+            "index": 1,
+            "name": "Color1",
+            "value": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Color2",
+            "value": [
+              0.7599999904632568,
+              0.7900000214576721,
+              0.7799999713897705,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.035",
+        "type": "ShaderNodeMath",
+        "label": "Clear glaze: retain pooling roughness variation",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.7799999713897705
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.036",
+        "type": "ShaderNodeMath",
+        "label": "Gloss pass: clearer glassy surface",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.6800000071525574
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.037",
+        "type": "ShaderNodeMath",
+        "label": "Small localized pooling gain",
+        "properties": {
+          "operation": "MULTIPLY",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 1.1200000047683716
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      },
+      {
+        "name": "\u8fd0\u7b97.038",
+        "type": "ShaderNodeMath",
+        "label": "Keep pooling translucent in appearance",
+        "properties": {
+          "operation": "MINIMUM",
+          "use_clamp": false
+        },
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "index": 1,
+            "name": "Value",
+            "value": 0.9399999976158142
+          },
+          {
+            "index": 2,
+            "name": "Value",
+            "value": 0.5
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "from_node": "\u539f\u7406\u5316 BSDF",
+        "from_socket": 0,
+        "to_node": "\u6750\u8d28\u8f93\u51fa",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u7eb9\u7406\u5750\u6807",
+        "from_socket": 3,
+        "to_node": "\u566a\u6ce2\u7eb9\u7406.001",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406.001",
+        "from_socket": 1,
+        "to_node": "\u77e2\u91cf\u8fd0\u7b97",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u7eb9\u7406\u5750\u6807",
+        "from_socket": 3,
+        "to_node": "\u77e2\u91cf\u8fd0\u7b97.001",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u77e2\u91cf\u8fd0\u7b97",
+        "from_socket": 0,
+        "to_node": "\u77e2\u91cf\u8fd0\u7b97.001",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u77e2\u91cf\u8fd0\u7b97.001",
+        "from_socket": 0,
+        "to_node": "\u566a\u6ce2\u7eb9\u7406",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u77e2\u91cf\u8fd0\u7b97.001",
+        "from_socket": 0,
+        "to_node": "\u566a\u6ce2\u7eb9\u7406.002",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406.002",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.001",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.002",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.001",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.002",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.003",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406.002",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.004",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.003",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.005",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.004",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.005",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.005",
+        "from_socket": 0,
+        "to_node": "\u6620\u5c04\u8303\u56f4",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u6620\u5c04\u8303\u56f4",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.006",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.006",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.007",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.007",
+        "from_socket": 0,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248)",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u5c5e\u6027",
+        "from_socket": 2,
+        "to_node": "\u8fd0\u7b97.008",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.008",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.009",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.009",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.010",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.010",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.011",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u5c5e\u6027.001",
+        "from_socket": 2,
+        "to_node": "\u8fd0\u7b97.012",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.012",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.013",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.010",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.014",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.013",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.015",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.014",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.016",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.015",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.016",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u6620\u5c04\u8303\u56f4",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.017",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.017",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.018",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.016",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.019",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.018",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.019",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.019",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.020",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u5c5e\u6027.001",
+        "from_socket": 2,
+        "to_node": "\u8fd0\u7b97.021",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.021",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.022",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.010",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.023",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.022",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.024",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.023",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.025",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.024",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.025",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.025",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.026",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.018",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.026",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.026",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.027",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u6df7\u5408 (\u65e7\u7248)",
+        "from_socket": 0,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).001",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u5c5e\u6027.002",
+        "from_socket": 2,
+        "to_node": "\u8fd0\u7b97.028",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.028",
+        "from_socket": 0,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).002",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u6df7\u5408 (\u65e7\u7248).001",
+        "from_socket": 0,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).002",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.029",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.010",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.030",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.029",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.031",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.030",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.031",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.031",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.032",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u566a\u6ce2\u7eb9\u7406",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.033",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.033",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.034",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u8fd0\u7b97.034",
+        "from_socket": 0,
+        "to_node": "\u539f\u7406\u5316 BSDF",
+        "to_socket": 2
+      },
+      {
+        "from_node": "\u51e0\u4f55\u6570\u636e",
+        "from_socket": 1,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).003",
+        "to_socket": 1
+      },
+      {
+        "from_node": "\u5c5e\u6027.003",
+        "from_socket": 1,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).003",
+        "to_socket": 2
+      },
+      {
+        "from_node": "\u6df7\u5408 (\u65e7\u7248).003",
+        "from_socket": 0,
+        "to_node": "\u77e2\u91cf\u8fd0\u7b97.002",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u77e2\u91cf\u8fd0\u7b97.002",
+        "from_socket": 0,
+        "to_node": "\u539f\u7406\u5316 BSDF",
+        "to_socket": 23
+      },
+      {
+        "from_node": "\u6df7\u5408 (\u65e7\u7248).002",
+        "from_socket": 0,
+        "to_node": "Darker celadon pigment",
+        "to_socket": 1
+      },
+      {
+        "from_node": "Darker celadon pigment",
+        "from_socket": 0,
+        "to_node": "\u539f\u7406\u5316 BSDF",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.032",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.035",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.035",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.036",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.036",
+        "from_socket": 0,
+        "to_node": "\u539f\u7406\u5316 BSDF",
+        "to_socket": 20
+      },
+      {
+        "from_node": "\u8fd0\u7b97.027",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.037",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.037",
+        "from_socket": 0,
+        "to_node": "\u8fd0\u7b97.038",
+        "to_socket": 0
+      },
+      {
+        "from_node": "\u8fd0\u7b97.038",
+        "from_socket": 0,
+        "to_node": "\u6df7\u5408 (\u65e7\u7248).001",
+        "to_socket": 0
+      }
+    ]
+  },
+  "world": {
+    "nodes": [
+      {
+        "name": "\u80cc\u666f",
+        "type": "ShaderNodeBackground",
+        "label": "",
+        "properties": {},
+        "inputs": [
+          {
+            "index": 0,
+            "name": "Color",
+            "value": [
+              0.6800000071525574,
+              0.7200000286102295,
+              0.7400000095367432,
+              1.0
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Strength",
+            "value": 0.15000000596046448
+          },
+          {
+            "index": 2,
+            "name": "Weight",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\u4e16\u754c\u8f93\u51fa",
+        "type": "ShaderNodeOutputWorld",
+        "label": "",
+        "properties": {},
+        "inputs": []
+      }
+    ],
+    "links": [
+      {
+        "from_node": "\u80cc\u666f",
+        "from_socket": 0,
+        "to_node": "\u4e16\u754c\u8f93\u51fa",
+        "to_socket": 0
+      }
+    ]
+  },
+  "lights": [
+    {
+      "name": "Soft_window_key",
+      "location": [
+        -5.0,
+        2.5,
+        3.799999952316284
+      ],
+      "rotation": [
+        0.9737807512283325,
+        -1.61671565024335e-08,
+        -2.0344440937042236
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "energy": 720.0,
+      "size": 3.799999952316284,
+      "size_y": 3.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "specular_factor": 1.0
+    },
+    {
+      "name": "Large_low_fill",
+      "location": [
+        3.0,
+        -3.0,
+        6.0
+      ],
+      "rotation": [
+        0.6154797673225403,
+        -2.7872651742200105e-08,
+        0.7853983044624329
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "energy": 150.0,
+      "size": 6.0,
+      "size_y": 5.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "specular_factor": 0.25
+    },
+    {
+      "name": "Rim_long_reflection",
+      "location": [
+        -4.0,
+        -1.0,
+        5.0
+      ],
+      "rotation": [
+        0.6895747184753418,
+        -3.44994077750016e-09,
+        -1.3258177042007446
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "energy": 190.0,
+      "size": 0.800000011920929,
+      "size_y": 5.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "specular_factor": 1.0
+    },
+    {
+      "name": "Product_window",
+      "location": [
+        -2.4000000953674316,
+        1.7999999523162842,
+        5.0
+      ],
+      "rotation": [
+        0.25410011410713196,
+        -1.6057700946703335e-08,
+        0.9600703716278076
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "energy": 190.0,
+      "size": 0.8500000238418579,
+      "size_y": 1.7000000476837158,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "specular_factor": 1.0
+    }
+  ],
+  "view": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.15000000596046448,
+    "gamma": 1.0
+  },
+  "attributes": [
+    {
+      "name": ".select_vert",
+      "type": "BOOLEAN",
+      "domain": "POINT"
+    },
+    {
+      "name": "position",
+      "type": "FLOAT_VECTOR",
+      "domain": "POINT"
+    },
+    {
+      "name": ".corner_vert",
+      "type": "INT",
+      "domain": "CORNER"
+    },
+    {
+      "name": ".corner_edge",
+      "type": "INT",
+      "domain": "CORNER"
+    },
+    {
+      "name": ".select_poly",
+      "type": "BOOLEAN",
+      "domain": "FACE"
+    },
+    {
+      "name": "sharp_face",
+      "type": "BOOLEAN",
+      "domain": "FACE"
+    },
+    {
+      "name": ".edge_verts",
+      "type": "INT32_2D",
+      "domain": "EDGE"
+    },
+    {
+      "name": ".select_edge",
+      "type": "BOOLEAN",
+      "domain": "EDGE"
+    },
+    {
+      "name": "MasterPalette",
+      "type": "FLOAT_COLOR",
+      "domain": "POINT"
+    },
+    {
+      "name": "PatternCoverage",
+      "type": "FLOAT",
+      "domain": "POINT"
+    },
+    {
+      "name": "ActualEngravingDepth",
+      "type": "FLOAT",
+      "domain": "POINT"
+    },
+    {
+      "name": "ConstructionDelta",
+      "type": "FLOAT_VECTOR",
+      "domain": "POINT"
+    },
+    {
+      "name": "ConstructionOrder",
+      "type": "FLOAT",
+      "domain": "POINT"
+    },
+    {
+      "name": "GlazeRimZone",
+      "type": "FLOAT",
+      "domain": "POINT"
+    },
+    {
+      "name": "GlazeHostNormal",
+      "type": "FLOAT_VECTOR",
+      "domain": "POINT"
+    },
+    {
+      "name": "GlazeCavitySpread",
+      "type": "FLOAT",
+      "domain": "POINT"
+    }
+  ],
+  "camera": {
+    "location": [
+      0.0,
+      0.0,
+      16.0
+    ],
+    "rotation": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "type": "ORTHO",
+    "ortho_scale": 11.199999809265137
+  },
+  "dimensions": [
+    10.071651458740234,
+    10.071651458740234,
+    0.7442538738250732
+  ],
+  "floor_materials": {
+    "STUDIO_ONLY": {
+      "nodes": [
+        {
+          "name": "\u539f\u7406\u5316 BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "label": "",
+          "properties": {
+            "distribution": "MULTI_GGX",
+            "subsurface_method": "RANDOM_WALK"
+          },
+          "inputs": [
+            {
+              "index": 0,
+              "name": "Base Color",
+              "value": [
+                0.2462013214826584,
+                0.21952620148658752,
+                0.1946178376674652,
+                1.0
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Metallic",
+              "value": 0.0
+            },
+            {
+              "index": 2,
+              "name": "Roughness",
+              "value": 0.7799999713897705
+            },
+            {
+              "index": 3,
+              "name": "IOR",
+              "value": 1.5
+            },
+            {
+              "index": 4,
+              "name": "Alpha",
+              "value": 1.0
+            },
+            {
+              "index": 5,
+              "name": "Normal",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Weight",
+              "value": 0.0
+            },
+            {
+              "index": 7,
+              "name": "Diffuse Roughness",
+              "value": 0.0
+            },
+            {
+              "index": 8,
+              "name": "Subsurface Weight",
+              "value": 0.0
+            },
+            {
+              "index": 9,
+              "name": "Subsurface Radius",
+              "value": [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Subsurface Scale",
+              "value": 0.05000000074505806
+            },
+            {
+              "index": 11,
+              "name": "Subsurface IOR",
+              "value": 1.399999976158142
+            },
+            {
+              "index": 12,
+              "name": "Subsurface Anisotropy",
+              "value": 0.0
+            },
+            {
+              "index": 13,
+              "name": "Specular IOR Level",
+              "value": 0.5
+            },
+            {
+              "index": 14,
+              "name": "Specular Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Anisotropic",
+              "value": 0.0
+            },
+            {
+              "index": 16,
+              "name": "Anisotropic Rotation",
+              "value": 0.0
+            },
+            {
+              "index": 17,
+              "name": "Tangent",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 18,
+              "name": "Transmission Weight",
+              "value": 0.0
+            },
+            {
+              "index": 19,
+              "name": "Coat Weight",
+              "value": 0.0
+            },
+            {
+              "index": 20,
+              "name": "Coat Roughness",
+              "value": 0.029999999329447746
+            },
+            {
+              "index": 21,
+              "name": "Coat IOR",
+              "value": 1.5
+            },
+            {
+              "index": 22,
+              "name": "Coat Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 23,
+              "name": "Coat Normal",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 24,
+              "name": "Sheen Weight",
+              "value": 0.0
+            },
+            {
+              "index": 25,
+              "name": "Sheen Roughness",
+              "value": 0.5
+            },
+            {
+              "index": 26,
+              "name": "Sheen Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 27,
+              "name": "Emission Color",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 28,
+              "name": "Emission Strength",
+              "value": 0.0
+            },
+            {
+              "index": 29,
+              "name": "Thin Film Thickness",
+              "value": 0.0
+            },
+            {
+              "index": 30,
+              "name": "Thin Film IOR",
+              "value": 1.3300000429153442
+            }
+          ]
+        },
+        {
+          "name": "\u6750\u8d28\u8f93\u51fa",
+          "type": "ShaderNodeOutputMaterial",
+          "label": "",
+          "properties": {},
+          "inputs": [
+            {
+              "index": 2,
+              "name": "Displacement",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Thickness",
+              "value": 0.0
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from_node": "\u539f\u7406\u5316 BSDF",
+          "from_socket": 0,
+          "to_node": "\u6750\u8d28\u8f93\u51fa",
+          "to_socket": 0
+        }
+      ]
+    },
+    "STUDIO_dark_reflection_card": {
+      "nodes": [
+        {
+          "name": "\u539f\u7406\u5316 BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "label": "",
+          "properties": {
+            "distribution": "MULTI_GGX",
+            "subsurface_method": "RANDOM_WALK"
+          },
+          "inputs": [
+            {
+              "index": 0,
+              "name": "Base Color",
+              "value": [
+                0.005605391692370176,
+                0.006995410192757845,
+                0.009134058840572834,
+                1.0
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Metallic",
+              "value": 0.0
+            },
+            {
+              "index": 2,
+              "name": "Roughness",
+              "value": 0.949999988079071
+            },
+            {
+              "index": 3,
+              "name": "IOR",
+              "value": 1.5
+            },
+            {
+              "index": 4,
+              "name": "Alpha",
+              "value": 1.0
+            },
+            {
+              "index": 5,
+              "name": "Normal",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Weight",
+              "value": 0.0
+            },
+            {
+              "index": 7,
+              "name": "Diffuse Roughness",
+              "value": 0.0
+            },
+            {
+              "index": 8,
+              "name": "Subsurface Weight",
+              "value": 0.0
+            },
+            {
+              "index": 9,
+              "name": "Subsurface Radius",
+              "value": [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Subsurface Scale",
+              "value": 0.05000000074505806
+            },
+            {
+              "index": 11,
+              "name": "Subsurface IOR",
+              "value": 1.399999976158142
+            },
+            {
+              "index": 12,
+              "name": "Subsurface Anisotropy",
+              "value": 0.0
+            },
+            {
+              "index": 13,
+              "name": "Specular IOR Level",
+              "value": 0.5
+            },
+            {
+              "index": 14,
+              "name": "Specular Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Anisotropic",
+              "value": 0.0
+            },
+            {
+              "index": 16,
+              "name": "Anisotropic Rotation",
+              "value": 0.0
+            },
+            {
+              "index": 17,
+              "name": "Tangent",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 18,
+              "name": "Transmission Weight",
+              "value": 0.0
+            },
+            {
+              "index": 19,
+              "name": "Coat Weight",
+              "value": 0.0
+            },
+            {
+              "index": 20,
+              "name": "Coat Roughness",
+              "value": 0.029999999329447746
+            },
+            {
+              "index": 21,
+              "name": "Coat IOR",
+              "value": 1.5
+            },
+            {
+              "index": 22,
+              "name": "Coat Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 23,
+              "name": "Coat Normal",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 24,
+              "name": "Sheen Weight",
+              "value": 0.0
+            },
+            {
+              "index": 25,
+              "name": "Sheen Roughness",
+              "value": 0.5
+            },
+            {
+              "index": 26,
+              "name": "Sheen Tint",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 27,
+              "name": "Emission Color",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "index": 28,
+              "name": "Emission Strength",
+              "value": 0.0
+            },
+            {
+              "index": 29,
+              "name": "Thin Film Thickness",
+              "value": 0.0
+            },
+            {
+              "index": 30,
+              "name": "Thin Film IOR",
+              "value": 1.3300000429153442
+            }
+          ]
+        },
+        {
+          "name": "\u6750\u8d28\u8f93\u51fa",
+          "type": "ShaderNodeOutputMaterial",
+          "label": "",
+          "properties": {},
+          "inputs": [
+            {
+              "index": 2,
+              "name": "Displacement",
+              "value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Thickness",
+              "value": 0.0
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from_node": "\u539f\u7406\u5316 BSDF",
+          "from_socket": 0,
+          "to_node": "\u6750\u8d28\u8f93\u51fa",
+          "to_socket": 0
+        }
+      ]
+    }
+  }
+}

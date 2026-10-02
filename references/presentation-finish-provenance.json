@@ -1,0 +1,35 @@
+{
+  "schema": "PresentationFinishProvenanceV2",
+  "version": "2.0.0",
+  "authority": "User explicitly selected the listed external source files as the standard for future glaze work.",
+  "source_identifier": "user-supplied/shoudai_soft_cloud_v5",
+  "source_files": {
+    "editable_shoudai_soft_cloud.blend": {
+      "sha256": "7e423f9998e4fe85182730b13245f8b4c0b55ce12649286520d2291cfeba451c",
+      "role": "Authoritative Blender material, world, lighting and color-management source; not distributed."
+    },
+    "ArtPlan.json": {
+      "sha256": "58c9e49a834286dff8aa911e9b08fc9758cfc49a7ab9ab90151c98ff353a517f",
+      "role": "Finish-only scope evidence; not distributed."
+    },
+    "geometry_lock.json": {
+      "sha256": "2dbbbaa763e97b0a6c2bd95e0c439c54ee2bbdc042a8fee9eb018189ceb60cfc",
+      "role": "Source geometry-lock evidence; not distributed."
+    },
+    "front.png": {
+      "sha256": "c8f6964131849ea68fae095a9773958d7c34298aae87f77e818324020472e19f",
+      "role": "Front visual acceptance reference; not distributed."
+    },
+    "3q.png": {
+      "sha256": "d5e64d91695dccfe27b6e0f874fc184fc7f4e9e140bfbb460315e0983c6b7045",
+      "role": "Three-quarter visual acceptance reference; not distributed."
+    },
+    "closeup.png": {
+      "sha256": "6d3acb02046af4324e021c058011d7682f4d6eeb3267e4eaabfe1c75f54a3f04",
+      "role": "Detail visual acceptance reference; not distributed."
+    }
+  },
+  "exported_graph_sha256": "6672023c8ebd26bbcc0e5bb94e5fddf79b8c9f1190799489611261ba8e1db90f",
+  "policy": "Replay the exported V5 shading/studio graph. Do not execute source-embedded scripts. Preserve new motif geometry. Both public preset names use the approved gray-cyan appearance unless the user explicitly requests recoloring.",
+  "redistribution": "External user-provided artwork, renders and Blender source are not bundled or relicensed. The release contains the extracted reusable shading/studio configuration only."
+}

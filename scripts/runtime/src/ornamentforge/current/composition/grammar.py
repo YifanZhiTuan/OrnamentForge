@@ -1,0 +1,215 @@
+"""Object and motif grammar libraries used by current ArtPlans.
+
+The data is intentionally semantic: executors may change, while the design
+contract and repair implications remain stable.
+"""
+from __future__ import annotations
+
+from ..input.router import ObjectFamily
+
+
+def _object(main, border, negative, flow, compositions, heroes, border_logic,
+            adaptation, failures, repairs):
+    return {
+        "main_visual_zones": main,
+        "border_zones": border,
+        "negative_space_zones": negative,
+        "primary_flow_patterns": flow,
+        "recommended_compositions": compositions,
+        "suitable_hero_motifs": heroes,
+        "border_logic": border_logic,
+        "relief_cutout_adaptation": adaptation,
+        "common_failure_patterns": failures,
+        "repair_strategies": repairs,
+    }
+
+
+OBJECT_GRAMMARS = {
+    ObjectFamily.MEDALLION.value: _object(
+        ["central field", "hero orbit", "quiet transition band"],
+        ["inner reveal", "rhythmic band", "stable outer seal"],
+        ["hero-facing pocket", "central breathing pocket", "continuous rim buffer"],
+        ["clockwise coil", "radial pulse", "paired counterflow"],
+        ["single coiled hero", "hero and pearl", "open-center radial ring"],
+        ["DRAGON", "PHOENIX", "RADIAL_MEDALLION", "LOTUS"],
+        "At least one flowing band and one visually stable sealing band.",
+        "Shallow relief separates four height families; cutout needs a transition ring.",
+        ["hero becomes filler", "ring collision", "empty center feels accidental"],
+        ["enlarge hero and quiet ring", "restore continuous rim buffer", "shape the center as intentional void"],
+    ),
+    ObjectFamily.VASE.value: _object(
+        ["neck restraint", "shoulder turn", "front belly hero", "back continuation", "foot rest"],
+        ["lip band", "shoulder transition", "foot band"],
+        ["hero-facing air", "side-turn pause", "quiet back field"],
+        ["diagonal shoulder-to-belly", "ascending branch", "tail wrap to back"],
+        ["asymmetric phoenix-flower", "branch-and-bird", "front medallion with back echo"],
+        ["PHOENIX", "PEONY", "BIRD", "FLORAL_BRANCH"],
+        "Bands follow changing circumference and never crop the primary subject.",
+        "Use parameter-space curves and locally reduce relief near tight shoulder/foot curvature.",
+        ["flat sticker patch", "front repeated on back", "tail vanishes at silhouette"],
+        ["wrap primary flow across side", "redesign back as lower-density continuation", "move turn beyond hero silhouette"],
+    ),
+    ObjectFamily.LAMPSHADE.value: _object(
+        ["front petal/panel", "side rhythm", "top and bottom structural rings", "support ribs"],
+        ["top socket ring", "bottom skirt", "vertical load paths"],
+        ["light apertures between primary vines", "halo around hero flower"],
+        ["bottom-up vine growth", "alternating panel S-curves", "rib-to-rib bridging"],
+        ["six-panel vine", "continuous full-field lattice", "front hero with side variants"],
+        ["VINE_SCROLL", "LOTUS", "PEONY", "LACE_CUTOUT"],
+        "Every panel network touches top/bottom or adjacent ribs; lower edge rhythm follows the plant language.",
+        "Negative space is designed first; retain rounded apertures and multiple support paths.",
+        ["random holes", "floating islands", "uniform repeated panels", "glow hides weak structure"],
+        ["reroute vine into ribs", "merge islands through secondary branch", "vary panel rhythm", "review unlit gray model"],
+    ),
+    ObjectFamily.PANEL_SCREEN.value: _object(
+        ["central narrative field", "side fields", "corner turns"],
+        ["inner picture frame", "wide pattern band", "outer structural frame"],
+        ["hero halo", "corner pauses", "frame buffer"],
+        ["vertical ascent", "diagonal narrative", "four-corner circulation"],
+        ["single scene", "paired panels", "full-field with centered reserve"],
+        ["PHOENIX", "BIRD", "PEONY", "FULL_FIELD"],
+        "Corners turn deliberately and border density steps down toward the picture field.",
+        "Relief depth may vary by frame; cutout preserves vertical and horizontal load paths.",
+        ["cropped border corners", "wallpaper density", "frame detached from subject"],
+        ["author corner modules", "open a hero halo", "redirect branches into frame response"],
+    ),
+    ObjectFamily.BOX_SURFACE.value: _object(
+        ["lid center", "hinge-side restraint", "front reveal"],
+        ["lid seal", "side-wall continuation", "corner medallions"],
+        ["center reserve", "hinge clearance", "edge buffer"],
+        ["center-to-corner", "front-facing cascade", "continuous border"],
+        ["center medallion", "asymmetric bouquet", "full-field with reserved cartouche"],
+        ["RADIAL_MEDALLION", "PEONY", "BIRD", "FULL_FIELD"],
+        "The lid seal stays legible and motifs acknowledge hinge/front orientation.",
+        "Keep functional seams clear; engraving can carry finer secondary rhythm.",
+        ["orientationless tile", "hinge collision", "corners clipped"],
+        ["declare front axis", "reserve hardware exclusion", "use corner-specific turns"],
+    ),
+    ObjectFamily.PENDANT.value: _object(
+        ["compact hero", "bail connection", "reverse echo"],
+        ["wear-resistant rim", "bail transition"],
+        ["hero halo", "bail clearance"],
+        ["vertical drop", "compact radial coil"],
+        ["single emblem", "open-center symbol", "paired auspicious motif"],
+        ["DRAGON", "PHOENIX", "LOTUS", "RADIAL_MEDALLION"],
+        "The bail grows out of the frame rather than appearing glued on.",
+        "Thicken high-contact edges and simplify micro detail for scale.",
+        ["oversized detail", "weak bail", "unbalanced hanging axis"],
+        ["simplify micro", "merge bail into border skeleton", "recenter visual mass under bail"],
+    ),
+    ObjectFamily.SPHERE.value: _object(
+        ["primary hemisphere", "equator flow", "pole transitions"],
+        ["opening rings", "equator seam", "pole caps"],
+        ["opening halos", "pole breathing zones"],
+        ["great-circle vine", "spiral growth", "radial opening response"],
+        ["hero hemisphere", "six-opening botanical network", "equatorial narrative band"],
+        ["DRAGON", "PHOENIX", "VINE_SCROLL", "FULL_FIELD"],
+        "Opening rings and poles use distinct transition grammar.",
+        "Use parameter-space mapping and inspect poles for convergence and stretch.",
+        ["flat texture wrap", "pole crowding", "all openings identical"],
+        ["rebuild in spherical parameters", "reduce pole density", "assign opening hierarchy"],
+    ),
+}
+
+
+def _motif(skeleton, flow, masses, anchors, negative, hierarchy, symmetry,
+           adaptation, meso, micro, repairs):
+    return {
+        "macro_skeleton": skeleton, "primary_flow": flow, "major_masses": masses,
+        "secondary_anchors": anchors, "negative_space_rules": negative,
+        "scale_hierarchy": hierarchy, "allowed_symmetry": symmetry,
+        "object_adaptation_rules": adaptation, "meso_detail": meso,
+        "micro_detail": micro, "repair_rules": repairs,
+    }
+
+
+MOTIF_GRAMMARS = {
+    "DRAGON": _motif("single readable spine with head and tail anchors", "head-to-tail coil",
+        ["head", "body band", "one or two limb masses"], ["horn", "whisker", "mane", "pearl"],
+        "protect head-facing pocket and inside coil", "head > thick body turn > limbs > cloud > scales",
+        ["none", "paired counterflow"], "flatten and widen turns before conforming; never map as opaque mesh",
+        ["belly band", "mane groups", "cloud responses"], ["scales", "whisker strands", "claw cuts"],
+        ["enlarge head", "simplify crossings", "remove scales before changing spine"]),
+    "PHOENIX": _motif("body spine, head/crown, wing anchors and tail spines", "head through torso into 3-5 tail sweeps",
+        ["head", "wing fan", "tail fan"], ["crown", "eye", "primary feathers", "peony"],
+        "leave air before beak and between tail ribbons", "head > wing > primary tails > flower > feather lines",
+        ["none", "bilateral wing only"], "tail may turn around vase; preserve head on the primary view",
+        ["feather groups", "flower cluster", "cloud/branch support"], ["feather veins", "eye", "crown cuts"],
+        ["clarify head silhouette", "reduce tail count", "separate wing from torso"]),
+    "PEONY": _motif("nested irregular petal rosette", "inward spiral with outward cupping",
+        ["outer cup", "middle petals", "center"], ["2-4 leaves", "branch node", "bud"],
+        "retain gaps between petal tiers", "hero bloom > companion bloom > bud > leaves",
+        ["radial with controlled irregularity"], "compress vertically on necks; widen on belly/flat fields",
+        ["petal tiers", "leaf cluster"], ["petal veins", "stamen dots"],
+        ["remove concentric sameness", "open center", "merge leaf stems into branch"]),
+    "LOTUS": _motif("ordered pointed-petal cup or radial rosette", "vertical emergence or radial pulse",
+        ["outer petals", "inner cup", "seed center"], ["leaf disk", "stem", "bud"],
+        "clean inter-petal notches", "central cup > outer petals > buds/leaves",
+        ["bilateral", "radial"], "use vertical lotus on vessel; radial lotus on medallion/pole",
+        ["petal tiers", "leaf rim"], ["seed dots", "petal veins"],
+        ["restore petal rhythm", "reduce seed noise", "strengthen stem connection"]),
+    "FLORAL_BRANCH": _motif("one trunk with explicit branch hierarchy", "root-to-tip growth",
+        ["main branch", "1-3 flowers"], ["branch forks", "leaves", "buds"],
+        "alternate dense nodes with open spans", "main flower > branch > companion flower > leaves > buds",
+        ["none", "mirror only for borders"], "follow object growth axis and turn branches before silhouette edge",
+        ["secondary branches", "leaf groups"], ["veins", "small buds"],
+        ["delete orphan leaves", "merge branch skeleton", "restore open spans"]),
+    "VINE_SCROLL": _motif("continuous vine with nested curls", "traceable S-curves",
+        ["main vine", "large scrolls"], ["branch curl", "leaf", "flower node"],
+        "loops enclose intentional apertures", "main vine > large curl > leaf > tendril",
+        ["translation", "mirror", "radial"], "change amplitude and branching with object zone; never uniform stamp",
+        ["secondary curls", "leaf rhythm"], ["tendrils", "veins"],
+        ["merge discontinuities", "remove isolated curl", "widen structural bridges"]),
+    "CLOUD_RUYI": _motif("linked cloud lobes or ruyi heads", "tangential support of hero flow",
+        ["primary cloud lobe"], ["inner curl", "tail", "flame tip"],
+        "never fill hero-facing air", "hero remains above every cloud group",
+        ["mirror", "radial", "translation"], "compress into border or stretch along dragon direction",
+        ["lobe groups", "transition bands"], ["inner line", "small tip"],
+        ["reduce lobe count", "align curl direction", "move away from face"]),
+    "FLAME": _motif("tapered tongues from shared root", "outward acceleration",
+        ["root", "largest tongue"], ["secondary tongues"], "keep channels between tongues",
+        "largest tongue > companions > inner cuts", ["bilateral", "radial"],
+        "align to movement, rim or halo", ["tongue groups"], ["inner incisions"],
+        ["unify root", "remove equal-size repetition", "open channels"]),
+    "BEAST": _motif("torso axis with exaggerated head anchor", "head-led compact turn",
+        ["head", "torso", "limb masses"], ["ears/horns", "tail", "claws"],
+        "protect face and joint gaps", "head > torso > limbs > tail > markings", ["bilateral"],
+        "abstract to support object scale; avoid realistic sculpture", ["joint planes", "mane"],
+        ["surface markings"], ["enlarge head", "simplify limbs", "remove markings first"]),
+    "BIRD": _motif("head-body axis with wing and tail anchors", "beak-to-tail diagonal",
+        ["body", "wing", "tail"], ["eye", "leg/branch", "flower"],
+        "air before beak and between tail/branch", "head > body > wing > tail > feather lines", ["none", "paired"],
+        "turn tail around curvature but retain beak on hero view", ["feather groups", "branch relation"],
+        ["veins", "eye"], ["clarify beak", "merge feet with branch", "reduce feather noise"]),
+    "RADIAL_MEDALLION": _motif("concentric zones around one declared center", "radial pulse plus ring circulation",
+        ["center/opening", "hero ring", "outer seal"], ["spokes", "petals", "small ring marks"],
+        "center and transition gaps are intentional", "hero ring > outer seal > inner marks > micro trim",
+        ["radial"], "change ring widths by object and opening function", ["major petals", "scroll ring"],
+        ["beads", "zigzags", "engraved lines"], ["restore ring hierarchy", "remove one competing band", "align center"]),
+    "BORDER": _motif("continuous path with corner/closure logic", "direction follows boundary",
+        ["stable rail", "rhythmic band"], ["corner", "closure", "transition"],
+        "buffer from hero and functional seam", "rail > rhythm > micro trim", ["translation", "radial", "cornered"],
+        "author corner/radial closure instead of clipping", ["repeat units", "transition bands"],
+        ["beads", "engraving"], ["repair closure", "reduce border weight", "align with primary flow"]),
+    "LACE_CUTOUT": _motif("connected graph between structural boundaries", "loops follow load paths and visual flow",
+        ["primary bridges", "large apertures"], ["secondary bridges", "scallops"],
+        "rounded openings; no isolated solid islands", "primary bridge > opening shape > secondary bridge > perforation",
+        ["translation", "mirror", "radial"], "respect wall thickness, heat and hardware exclusions",
+        ["bridge rhythm", "scallops"], ["micro perforations only on wide regions"],
+        ["connect islands", "widen thin bridge", "remove unsupported perforation"]),
+    "FULL_FIELD": _motif("global branch or lattice skeleton", "one readable circulation through the field",
+        ["main network", "hero nodes"], ["secondary network", "edge turns"],
+        "density varies by zone and leaves hero halos", "hero nodes > main network > secondary nodes > filler",
+        ["translation", "mirror", "controlled asymmetry"], "change scale/density at center, edge and corner",
+        ["secondary nodes", "edge response"], ["small leaves", "engraving"],
+        ["reveal main network", "delete filler", "author edge/corner turns"]),
+}
+
+
+def object_grammar(name: str | ObjectFamily) -> dict:
+    key = name.value if isinstance(name, ObjectFamily) else str(name).upper()
+    return OBJECT_GRAMMARS[key]
+
+
+def motif_grammar(name: str) -> dict:
+    return MOTIF_GRAMMARS[name.upper()]

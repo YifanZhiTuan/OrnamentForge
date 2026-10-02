@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paperball.local/schemas/ornament_spec.schema.json",
+  "title": "OrnamentSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "input",
+    "base_surface",
+    "composition",
+    "ornament",
+    "layout",
+    "geometry",
+    "generation",
+    "target"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "text",
+            "image",
+            "multi_image",
+            "existing_surface",
+            "mixed"
+          ]
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "reference_images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "surface_object": {
+          "type": "string"
+        }
+      }
+    },
+    "base_surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "plane",
+            "cylinder",
+            "sphere",
+            "revolved",
+            "freeform",
+            "existing"
+          ]
+        },
+        "dimensions": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "shell_thickness": {
+          "type": "number",
+          "minimum": 0
+        },
+        "object_name": {
+          "type": "string"
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "symmetry",
+        "primary_axis"
+      ],
+      "properties": {
+        "preset": {
+          "enum": [
+            "NONE",
+            "ROUND_DRAGON",
+            "DOUBLE_DRAGON_PEARL",
+            "DRAGON_CLOUD",
+            "ROUND_PHOENIX",
+            "PHOENIX_PEONY",
+            "DRAGON_PHOENIX",
+            "CLOUD_DRAGON",
+            "LOTUS_DRAGON"
+          ]
+        },
+        "symmetry": {
+          "enum": [
+            "none",
+            "mirror",
+            "radial",
+            "bilateral",
+            "custom"
+          ]
+        },
+        "symmetry_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "primary_axis": {
+          "enum": [
+            "X",
+            "Y",
+            "Z"
+          ]
+        },
+        "negative_space": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "openings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shape",
+          "count"
+        ],
+        "properties": {
+          "shape": {
+            "enum": [
+              "circle",
+              "ellipse",
+              "polygon",
+              "custom"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 128
+          },
+          "radius_ratio": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          },
+          "clearance": {
+            "type": "number",
+            "minimum": 0
+          },
+          "border": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "type": {
+                "enum": [
+                  "none",
+                  "single_ring",
+                  "double_ring",
+                  "ornamental"
+                ]
+              },
+              "width": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "ornament": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "relief_mode"
+      ],
+      "properties": {
+        "family": {
+          "enum": [
+            "botanical",
+            "geometric",
+            "filigree",
+            "organic",
+            "chinese_traditional",
+            "chinese_creature",
+            "mixed"
+          ]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "style": {
+          "type": "string"
+        },
+        "density": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "relief_mode": {
+          "enum": [
+            "emboss",
+            "engrave",
+            "cutout",
+            "mixed"
+          ]
+        },
+        "primary_motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/motif"
+          }
+        },
+        "secondary_motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/motif"
+          }
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "avoid_openings"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "explicit_preset",
+            "radial",
+            "border_flow",
+            "path_repeat",
+            "mirror",
+            "surface_flow",
+            "controlled_scatter",
+            "mixed"
+          ]
+        },
+        "avoid_openings": {
+          "type": "boolean"
+        },
+        "border_clearance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimum_spacing": {
+          "type": "number",
+          "minimum": 0
+        },
+        "flow_strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "surface_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "enum": [
+            "auto",
+            "uv",
+            "planar",
+            "parameter_space",
+            "raycast_normal"
+          ]
+        },
+        "conform": {
+          "type": "boolean"
+        },
+        "normal_alignment": {
+          "type": "boolean"
+        },
+        "normal_offset": {
+          "type": "number"
+        }
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_feature_width",
+        "minimum_wall_thickness"
+      ],
+      "properties": {
+        "ornament_height": {
+          "type": "number",
+          "minimum": 0
+        },
+        "engrave_depth": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimum_feature_width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimum_wall_thickness": {
+          "type": "number",
+          "minimum": 0
+        },
+        "bevel": {
+          "type": "number",
+          "minimum": 0
+        },
+        "boolean_tolerance": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed",
+        "quality"
+      ],
+      "properties": {
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "quality": {
+          "enum": [
+            "preview",
+            "draft",
+            "quality",
+            "ultra"
+          ]
+        },
+        "max_repair_attempts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "editable",
+            "render_ready",
+            "print_ready"
+          ]
+        },
+        "export_formats": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "blend",
+              "fbx",
+              "obj",
+              "stl",
+              "glb"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "motif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "importance"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "importance": {
+          "enum": [
+            "primary",
+            "secondary",
+            "filler"
+          ]
+        },
+        "source": {
+          "enum": [
+            "approved",
+            "open_source",
+            "user",
+            "generated"
+          ]
+        },
+        "scale": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rotation_degrees": {
+          "type": "number"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

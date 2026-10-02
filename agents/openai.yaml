@@ -1,0 +1,4 @@
+interface:
+  display_name: "OrnamentForge"
+  short_description: "Editable ornament through reference, craft and Blender"
+  default_prompt: "Use $ornamentforge to turn my ornament request into a reviewed editable asset, preserving provenance and stopping at any HOLD."

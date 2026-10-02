@@ -1,0 +1,1292 @@
+{
+  "schema": "OrnamentForgeSkillReleaseManifestV2",
+  "release_version": "2.0.1-v1-two-input-routes",
+  "created_date": "2026-10-01",
+  "source_checkout_required": false,
+  "skill_entrypoint": "SKILL.md",
+  "presentation_finish": {
+    "default": "QINGBAI_GLAZE",
+    "available": [
+      "QINGBAI_GLAZE",
+      "YINGQING_GLAZE"
+    ],
+    "version": "2.0.0",
+    "graph": "scripts/runtime/src/ornamentforge/current/blender/soft_cloud_v5.json",
+    "external_source_artwork_bundled": false,
+    "validation": "references/presentation-finish-validation.json"
+  },
+  "license_policy": {
+    "code_and_documentation": "MIT",
+    "third_party_material": "Retains upstream notices; dependencies are not vendored.",
+    "user_supplied_reference_material": "Excluded and not relicensed."
+  },
+  "excluded": [
+    "bytecode and caches",
+    "references/license-changes.json",
+    "run outputs and historical ArtLibrary data",
+    "scripts/runtime/benchmarks/",
+    "scripts/runtime/library/",
+    "scripts/runtime/schemas/example_ornament_spec.json",
+    "scripts/runtime/schemas/example_showcase_ornament_sphere.json",
+    "scripts/runtime/schemas/example_showcase_v1.json",
+    "scripts/runtime/schemas/motif_record.schema.json",
+    "scripts/runtime/src/ornamentforge/current/composition/composition_grammar.py",
+    "scripts/runtime/src/ornamentforge/current/composition/composition_planner.py",
+    "scripts/runtime/src/ornamentforge/current/composition/composition_qa.py",
+    "scripts/runtime/src/ornamentforge/current/composition/preview.py",
+    "scripts/runtime/src/ornamentforge/current/composition/semantic_intent.py",
+    "scripts/runtime/src/ornamentforge/current/library/original_motifs.py",
+    "scripts/runtime/src/ornamentforge/current/library/publish_originals.py",
+    "scripts/runtime/src/ornamentforge/current/library/semantic_library.py",
+    "user reference images and renders",
+    "user-supplied Blender source files",
+    "virtual environments and dependency binaries"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "3d32d3de56cb0d53d9123e67ba1aa9b448b3929395f633cb579dede411be0a7f",
+      "size_bytes": 107,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "3fcb3e7f8934c8cf1a5d7da1e08ad932cb4baa91110c2518a8625a55b7a16e2d",
+      "size_bytes": 268,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "22b101a3fd2dc232938d20f79549095f4b55909163dc6d4c01a8a10fc432a3df",
+      "size_bytes": 1078,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "LICENSE-ASSETS.md",
+      "sha256": "72008ba6c452775064488633d68d6ad1264777da92295674fe48622700fe26f9",
+      "size_bytes": 607,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ab09822bd864d6553e568ffe4a2c6fc2fcbea52885ce3d31e8cc5755d1522a5f",
+      "size_bytes": 2408,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "references/capabilities.md",
+      "sha256": "66cc315a63dc17724ea64df03ee0d78eb89fedac59bbf10f2eee50330b398e54",
+      "size_bytes": 2850,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/core-source-hashes.json",
+      "license": "MIT",
+      "category": "skill-package",
+      "sha256": "79e2e60925388eea425c98201b430458134d99b379d5f05abd0f0421e36b3788",
+      "size_bytes": 6235
+    },
+    {
+      "path": "references/distribution.md",
+      "sha256": "ddbadd917680b8843669050f7d8e4a4caeb051b9f369a43d25dafd5c31571679",
+      "size_bytes": 1808,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/input-and-fidelity.md",
+      "sha256": "9635b355926270f52793fef3f466f2d6771de6e52f7731526bd0bec5a6efdae5",
+      "size_bytes": 3861,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/input-route-validation.json",
+      "license": "MIT",
+      "category": "skill-package",
+      "sha256": "c3db19f44b94fa63b947d540e642fbf8a9955b8602b31d2edb141186e1f5980d",
+      "size_bytes": 2548
+    },
+    {
+      "path": "references/presentation-finish-provenance.json",
+      "sha256": "8de093908ff8075741ed51b7c7cea7390d549a68071ae89de4940d00638d53d9",
+      "size_bytes": 1942,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/presentation-finish-validation.json",
+      "sha256": "c378db123eb1b04e772a7cea3dae2390718b49e50eba76afbe3dbf3be99c7e6a",
+      "size_bytes": 5979,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/presentation-finish.md",
+      "sha256": "75464121de771ea98cfaa5f9eee251b9c252d434b9b603e293b4f31d93f11408",
+      "size_bytes": 5552,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/setup.md",
+      "sha256": "5840eb13f3203a2092eb43cc8e0244e3ffb0db39540fdb7a33dabc84a5c222ae",
+      "size_bytes": 2633,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/surface-craft-blender.md",
+      "sha256": "0bf8cd6ad0ed8c5b63fdbc101289f0bb2ff523f00c906ea4e07331ab41825e94",
+      "size_bytes": 8134,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "references/third-party-dependencies.json",
+      "sha256": "671c433fc7a74ca57702ebbac1009c1837fd6ab5807c465ad5ee7808da3b9a7f",
+      "size_bytes": 88746,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/attrs/attrs-26.1.0.dist-info/licenses/LICENSE",
+      "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+      "size_bytes": 1109,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/ImageIO/imageio-2.37.4.dist-info/licenses/LICENSE",
+      "sha256": "c453cf1368bb9e009e4d7e5334fc78511e665316a612ef54ee4fe1245678fe2c",
+      "size_bytes": 1307,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/jsonschema/jsonschema-4.26.0.dist-info/licenses/COPYING",
+      "sha256": "4f92a015a13c4d1a040bef018aa13430b4f1bc73b41b16bb846c346766de7439",
+      "size_bytes": 1057,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/jsonschema-specifications/jsonschema_specifications-2025.9.1.dist-info/licenses/COPYING",
+      "sha256": "42dcd63495f87b4eb7c7757afa379bb55a53f94afd7a5f657d9adf57236e515c",
+      "size_bytes": 1057,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/lazy-loader/lazy_loader-0.6.dist-info/licenses/LICENSE.md",
+      "sha256": "797b6937a4f976836efbbbb3ae333d7866ddc3eb3cb152972b2be348d3529372",
+      "size_bytes": 1539,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/networkx/networkx-3.6.1.dist-info/licenses/LICENSE.txt",
+      "sha256": "3cf7c3a179d817b23b8b8568211769fefdf93797d207d984b8b2fa24d0220b33",
+      "size_bytes": 1763,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy/_core/include/numpy/random/LICENSE.txt",
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150",
+      "size_bytes": 1039,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy/ma/LICENSE",
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7",
+      "size_bytes": 1616,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy/random/LICENSE.md",
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a",
+      "size_bytes": 3582,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/LICENSE.txt",
+      "sha256": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341",
+      "size_bytes": 45831,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150",
+      "size_bytes": 1039,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0",
+      "size_bytes": 704,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+      "sha256": "d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763",
+      "size_bytes": 21155,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+      "sha256": "b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919",
+      "size_bytes": 1441,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "sha256": "a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb",
+      "size_bytes": 1542,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "sha256": "585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41",
+      "size_bytes": 1573,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "sha256": "8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af",
+      "size_bytes": 1523,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "sha256": "19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b",
+      "size_bytes": 2314,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/ma/LICENSE",
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7",
+      "size_bytes": 1616,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/LICENSE.md",
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a",
+      "size_bytes": 3582,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+      "sha256": "cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e",
+      "size_bytes": 2805,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "sha256": "92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa",
+      "size_bytes": 2986,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "sha256": "41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f",
+      "size_bytes": 1176,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+      "sha256": "322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013",
+      "size_bytes": 1540,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "sha256": "28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59",
+      "size_bytes": 1253,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/numpy/numpy-2.4.6.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+      "sha256": "454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763",
+      "size_bytes": 340,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/opencv-python-headless/cv2/LICENSE-3RD-PARTY.txt",
+      "sha256": "e24e3768561906cc7ccba808f2e8bb4b4bcb2988fece11656b7b56cf14da6bc5",
+      "size_bytes": 182909,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/opencv-python-headless/cv2/LICENSE.txt",
+      "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107",
+      "size_bytes": 1090,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/opencv-python-headless/opencv_python_headless-4.14.0.94.dist-info/LICENSE-3RD-PARTY.txt",
+      "sha256": "e24e3768561906cc7ccba808f2e8bb4b4bcb2988fece11656b7b56cf14da6bc5",
+      "size_bytes": 182909,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/opencv-python-headless/opencv_python_headless-4.14.0.94.dist-info/LICENSE.txt",
+      "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107",
+      "size_bytes": 1090,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/packaging/packaging-26.3.dist-info/licenses/LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "size_bytes": 197,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/packaging/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "size_bytes": 10174,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/packaging/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "size_bytes": 1344,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/pillow/pillow-12.3.0.dist-info/licenses/LICENSE",
+      "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857",
+      "size_bytes": 78016,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/referencing/referencing-0.37.0.dist-info/licenses/COPYING",
+      "sha256": "42dcd63495f87b4eb7c7757afa379bb55a53f94afd7a5f657d9adf57236e515c",
+      "size_bytes": 1057,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/rpds-py/rpds_py-2026.6.3.dist-info/licenses/LICENSE",
+      "sha256": "8bcb72c82ea8ae74802293c41d93ad7d51434001b0ae45a603a5af0f507aee0a",
+      "size_bytes": 1076,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scikit-image/scikit_image-0.26.0.dist-info/LICENSE.txt",
+      "sha256": "c0ae0d653416915f77a6364eef489ab59fcb319514a806422285cb4359657c5b",
+      "size_bytes": 6587,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scipy/scipy/_lib/_uarray/LICENSE",
+      "sha256": "e4c4acc31e8287066d7c995d26e3ef902ca1977ee187b260b11c278366503811",
+      "size_bytes": 1543,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scipy/scipy/fft/_pocketfft/LICENSE.md",
+      "sha256": "c04661685cff9d8035fe1c4c3ab357e7f7633cafc06a73e9d90c3c5fede8a86a",
+      "size_bytes": 1523,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scipy/scipy/integrate/LICENSE_DOP",
+      "sha256": "6cc2ed6e35b8f376ff3d8f86aeef4e0c34c2309bd6f4a0565936d577839ba023",
+      "size_bytes": 3648,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scipy/scipy/spatial/qhull_src/COPYING_QHULL.txt",
+      "sha256": "2a6ebb495e26dd5f88cbc40c593733da6edb27b64936f70409cd5a1acafb1c32",
+      "size_bytes": 1759,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/scipy/scipy-1.17.1.dist-info/LICENSE.txt",
+      "sha256": "564d63dbef2ef3eb1dec94908966d3edf5f11c487ee2cf2baf8bf3faef01bdd9",
+      "size_bytes": 46756,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/tifffile/tifffile-2026.3.3.dist-info/licenses/LICENSE",
+      "sha256": "65e641f17cfce25ed2c02f0d53c94cfa2382cc8817eca649a7fff2b890114aa4",
+      "size_bytes": 1559,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/third-party-licenses/typing_extensions/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "size_bytes": 13936,
+      "license": "LicenseRef-Upstream-Notice",
+      "category": "third-party-notices"
+    },
+    {
+      "path": "references/validation.md",
+      "sha256": "60f6da3a81bca422556cd55cd6ff28d1a9a90c5abbe0a43474c0cff8db504099",
+      "size_bytes": 3205,
+      "license": "MIT",
+      "category": "documentation"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "license": "MIT",
+      "category": "skill-package",
+      "sha256": "14dca83ebee757efa1b31f566ed7934cf65d64f9c4ab1dbc5f84ec6fe83d4251",
+      "size_bytes": 4601
+    },
+    {
+      "path": "scripts/check_runtime.py",
+      "sha256": "7f1a9840571cd762df4ecddb4a784649ba9fcf06ebddbc268f52a10fdecb1e96",
+      "size_bytes": 3872,
+      "license": "MIT",
+      "category": "tools"
+    },
+    {
+      "path": "scripts/requirements.txt",
+      "sha256": "8561665517d07d2d9e0ec97e342cd932cfc710838b0ab69312a03ac069417053",
+      "size_bytes": 117,
+      "license": "MIT",
+      "category": "tools"
+    },
+    {
+      "path": "scripts/run.py",
+      "sha256": "f5dd9c3bfae3296a5b2c23271bc32a06492982a0874160f54146beee6cb2dc98",
+      "size_bytes": 2658,
+      "license": "MIT",
+      "category": "tools"
+    },
+    {
+      "path": "scripts/runtime/schemas/ornament_spec.schema.json",
+      "sha256": "edebde4b1b067f9b04640892bf834ac422d2b181c2e237145d9040f17fbdb203",
+      "size_bytes": 9278,
+      "license": "MIT",
+      "category": "schemas"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/__init__.py",
+      "sha256": "37003be9bf4b73141ad3004feb10609ac7b462c41d1a821a3792e06002fb09cc",
+      "size_bytes": 154,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/__main__.py",
+      "sha256": "4b3040bbaf6ed24f01d7cda2d9d6622a92a3f942695cb85a954709ad68939fcf",
+      "size_bytes": 129,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/b01.py",
+      "sha256": "5d080c999d1faa870d426de017683e66f598bbccca3fe21ad502e2392f08b143",
+      "size_bytes": 3576,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/b01_library.py",
+      "sha256": "ef8407a10dae4b7ea7f4cf107059df35cd10f6d66cde7bcfd0b00b46b7242835",
+      "size_bytes": 3672,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/b01_qa.py",
+      "sha256": "211696b89ae5c565bd6546b0a63749d917cd5908bd85bac68b78fbefc377742b",
+      "size_bytes": 2466,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/blender_contract.py",
+      "sha256": "99cabb902fd03432cba6d634263da264819dfc1cda63f56b26849957ed1cb5f9",
+      "size_bytes": 3854,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/blender_detection.py",
+      "sha256": "7f8ef97037ca0d3ecd2dade545a0de8b4f6ab80d8cc44b6a060b488cf8711d09",
+      "size_bytes": 2176,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/blender_executor.py",
+      "sha256": "966683f34436e819a7b9ed4b717912cbe245556179f48807f326933ab152d82e",
+      "size_bytes": 7690,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/blender_worker.py",
+      "sha256": "d40e8f4acc50edc10803c16eb7302a48ec974f4e0ce8ee1af07619ddf37f2089",
+      "size_bytes": 16576,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/canonical_curve.py",
+      "sha256": "1842c797a1d5997f2f2f452e28e5c2a11bd712e93c4f309e864d380e9a93fdac",
+      "size_bytes": 3466,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/checkpoints.py",
+      "sha256": "a3711aa86570dacdedc4bb5a30f8901dba539ce569971b70ae494619fcca150e",
+      "size_bytes": 1227,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/__init__.py",
+      "sha256": "d19228bb57718751a0b47ab9719637b1d2bc681a110a722ccf6ba1f58049e476",
+      "size_bytes": 387,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "size_bytes": 48,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/__init__.py",
+      "sha256": "f3cd50dfcd48e7a35dca1a419f6d90f8324e987418bd059a32dabeb8a8ae11f5",
+      "size_bytes": 65,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/engraving_field_worker.py",
+      "sha256": "659bc706921db6529ef5d472ee6702e830cd0203787c54f04e1179e63843bfd7",
+      "size_bytes": 6209,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/presentation_finish.py",
+      "sha256": "d755860570807cf57a7e3d03234910d0a205e38409eb16cbb70987396feaede2",
+      "size_bytes": 4994,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/presentation_presets.json",
+      "sha256": "df4bd2d1905b6fb68e98b34434d141f11b3cba38db1373ffd96f3ee2cdbc9d92",
+      "size_bytes": 547,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/reference_worker.py",
+      "sha256": "931929ac59d5779f0b17dde4bf9ca9f794829471d700024d803266c82c774aff",
+      "size_bytes": 38280,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/soft_cloud_finish.py",
+      "sha256": "22bec7f56249bdd9c5b306e172a2cf84b89df4b200ee6911e2ef19b050936aa1",
+      "size_bytes": 5902,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/soft_cloud_v5.json",
+      "sha256": "6672023c8ebd26bbcc0e5bb94e5fddf79b8c9f1190799489611261ba8e1db90f",
+      "size_bytes": 71136,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/blender/surface_worker.py",
+      "sha256": "b7d422d01dfe3e04a542e9338dba9ddd2357da195dafeccbbce1a0fcc5eb8198",
+      "size_bytes": 10908,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/cli.py",
+      "sha256": "a596e0262b6ae18efd4742911c0ef40e4ac5b2cb7d6b750284d556ff59922e5f",
+      "size_bytes": 8470,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/composition/__init__.py",
+      "sha256": "53175d660ff9d710c179b1b4310b34b5dabf59566d694d973fd27a7eeeedbecc",
+      "size_bytes": 115,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/composition/b01.py",
+      "sha256": "0a120225b2bf316d669e3b03f6e9fba82d20e9bc3b57965150d24acb75caa2ef",
+      "size_bytes": 6840,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/composition/grammar.py",
+      "sha256": "82b1eb9616613d12ea1d136d10e14265b2cd03789c931482cd601a798f23fb34",
+      "size_bytes": 14799,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/composition/layouts.py",
+      "sha256": "003c8c7f0c8c60f06ae8db5511cc6b902c2c3158958742f90bb1999687215e02",
+      "size_bytes": 1872,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/composition/planar_composer.py",
+      "sha256": "3985182519de2968dd156c9567c064ef71cd8a6497d75a039b07a3d7505508d7",
+      "size_bytes": 11599,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/__init__.py",
+      "sha256": "3fa2997a9ee2248cb555637763f473a097e5e03b824c0081a61f254d6da0ab50",
+      "size_bytes": 168,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/engraved.py",
+      "sha256": "ea150042a3a1c10831016860e1c630b4779e827935dc488944e7d6758752d69e",
+      "size_bytes": 3588,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/engraving_field.py",
+      "sha256": "96cbde82a3af9108baa4ee2d127ec7d019524da6060d0f2f84325a01dad16067",
+      "size_bytes": 5606,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/engraving_field_run.py",
+      "sha256": "349c8031cd4fa4c1d4e11065612bf92e56938933f2dff9ccf38192f235a24385",
+      "size_bytes": 8305,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/experimental.py",
+      "sha256": "33a2014a9b316f0937b359eacfeaaccb107fbd87704bf3eda38cd96bc8d3014a",
+      "size_bytes": 1616,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/glaze.py",
+      "sha256": "488d305513d44950f4977fc118e464e7c6934c834c369f4e42dbd82a0c90282e",
+      "size_bytes": 1188,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/interpreter.py",
+      "sha256": "2dd8c5a9dd8f8ed8edd6ab0c9ab24436e9f9f98850a0321a86765744b0243660",
+      "size_bytes": 5132,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/painted.py",
+      "sha256": "f3232b6edaafc8c9f9b39d1c0bfa63fd5f6e6c01b9c25ce3f5f4c3b02c8ef637",
+      "size_bytes": 953,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/porcelain.py",
+      "sha256": "01aa8b8b8d099cc17b1321b73878f56b98fce8c20728840290bab709478fa12b",
+      "size_bytes": 7184,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/relief.py",
+      "sha256": "ddb4f53e175520beb2c323c08290d099e0b6591cf3db26f19fd1e69c42d54f29",
+      "size_bytes": 4627,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/relief_petal.py",
+      "sha256": "4bb58986f9cf1cfc5cc832d994301ad5a35857fa270ae730a66c2590383b0abe",
+      "size_bytes": 703,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/surface_adapter.py",
+      "sha256": "e95f5a27ce1ed89beb812abeab2cb5978ade16ace7ac77dee92eacf377acaf3c",
+      "size_bytes": 3034,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/craft/vessel_relief.py",
+      "sha256": "0c88d748a926c9e7a643969301648423c615035e840c919e81bcf7584aa251a8",
+      "size_bytes": 3385,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/design/__init__.py",
+      "sha256": "3437d3c9876587eb5949b9f30f09cb8256c02aae03b04118f9eeaaba512f2d72",
+      "size_bytes": 177,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/design/handoff.py",
+      "sha256": "db7801204645c328bfe2cad87d66c5744042df329cfc61bf26e2279620f24257",
+      "size_bytes": 7474,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/__init__.py",
+      "sha256": "50128f0f53a0df663f59447bf6beb6c32dd594aa94c322a7381c0806f2fb2757",
+      "size_bytes": 145,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/frontend.py",
+      "sha256": "9b1683bbf17b650cb86caa14055e85dbdca67152988ad7416fa2db1efa4a6f0f",
+      "size_bytes": 2238,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/line_art.py",
+      "sha256": "a3fd74b26ee151c0e13f9c79860ff4dedaf42d3ca8bb7b4a6a54c6f51d473b61",
+      "size_bytes": 6094,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/line_art_pass.py",
+      "sha256": "1b88d7c7ab7136c4461ae2429c496287f608b7d5e9ca1be71429d86cfcf13d1a",
+      "size_bytes": 3263,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/line_qa.py",
+      "sha256": "d482cc48ca656e3d48423a330beb29a77c8a6df76ffc44e25af511e02f4fb564",
+      "size_bytes": 4459,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/qa.py",
+      "sha256": "e561f192fb5883edbf27e457c19d6b21e1722b1f262f21453c4bf54238e923fe",
+      "size_bytes": 5259,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/reconstruction.py",
+      "sha256": "d4e353773a42cad30f226b312a1fbef97f96b448f1a89a319196b1ff40874489",
+      "size_bytes": 3548,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/reference_mode.py",
+      "sha256": "41b122bc5f6ecee09f5ace9b6ac7582de48d5f15a573a9dfd81e5cad323de4bc",
+      "size_bytes": 2839,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/run.py",
+      "sha256": "35f730cf689a95bc6595448a59188ca639e65505aa615ca9105ac19d685b9d23",
+      "size_bytes": 5801,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/stroke_curves.py",
+      "sha256": "0fbe0ed4f6a0c4001fc31a1ea974419678be8f9f118d661a23999058b18393cf",
+      "size_bytes": 4795,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/fidelity/stroke_graph.py",
+      "sha256": "7ddf69d733d8340fb22e75a8a46263a3a1715f9232750c4a06f5e9c715f57383",
+      "size_bytes": 6939,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/input/__init__.py",
+      "sha256": "30154d252cc4af106450b8d41b68810c40ebde26053abd6841569d5f95c993e4",
+      "size_bytes": 210,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/input/planar_routes.py",
+      "sha256": "0aea7523cc5b42a304d0b5ea0265dd25b499cdc8f3e5cc777aeb44427c002afc",
+      "size_bytes": 3609,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/input/router.py",
+      "sha256": "b62376d4c0988bdd2f7550f7139f48dd8a52ffdfd9272f796dfbb4c99b605253",
+      "size_bytes": 12260,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/library/__init__.py",
+      "sha256": "f32981ba25bcc76fa602c033b3a4a5e81e4a4b962d28fd6420d7dccedfbde55c",
+      "size_bytes": 123,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/library/art_references.py",
+      "sha256": "b72a5fc411b6bd798708e221554e731512fa9d34d2fbe57cc53fa86fbaa9f0ac",
+      "size_bytes": 5555,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/library/motif_library.py",
+      "sha256": "137b6d49aaacd6941cf0b90902abbc14889a804e90604bd56a36d6ee7031136a",
+      "size_bytes": 10975,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/library/motif_record.py",
+      "sha256": "012e90da3e18ec604096440eea0f43c78261e7e540b9b78d8d380f60073cb5f4",
+      "size_bytes": 2602,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/library/retrieval.py",
+      "sha256": "9b2c37365b41f76f6b72d64ec660e3c5aa126a23c51aae3feb6c55e661bcd755",
+      "size_bytes": 5287,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/__init__.py",
+      "sha256": "e64b9f9761b736f1a441794a14d760f520c0ece8fecf38c70bb48893f0dfbcd9",
+      "size_bytes": 426,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/__init__.py",
+      "sha256": "0d3baca3a669ad3a9b6b4399ffebdaeccfd962ce5dab269121921e1bcde4016c",
+      "size_bytes": 150,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/export.py",
+      "sha256": "30f45692f49038ff94b2791982b96770702982384ab12ed6aa71f43e3eeec527",
+      "size_bytes": 4820,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/geometry.py",
+      "sha256": "4ca2f56902a9d13c32a6a97f665da9fe6be56f39174d55b90cbbf0126066165c",
+      "size_bytes": 2818,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/network.py",
+      "sha256": "915e5e3987f34cab3c4f3c17ffedffff3c5983cd4f9cd0a01dac818ca33f5f02",
+      "size_bytes": 12481,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/qa.py",
+      "sha256": "f68eff1dc43d74a6838c20ea473a127ad97351ade3583ffad3d870bb219f0e83",
+      "size_bytes": 6900,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/cleanup/run.py",
+      "sha256": "830f0a3cb4c6667f776c67e5a7be81a19dab7e77106492fc1090bd9ec5bb92eb",
+      "size_bytes": 9112,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/contract.py",
+      "sha256": "49d1846fda738b17fd90da73e3970358ed32a31f7b5ec3893aff74e1946e355f",
+      "size_bytes": 8896,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/planar/master.py",
+      "sha256": "e6a3b25450d8d8cf175cc7a3b05a272898eb03af4c0875d3b60c38fd18601012",
+      "size_bytes": 16013,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/qa/__init__.py",
+      "sha256": "251341eac00d0f9e10463bd8befbc1cbc6d7d52abafc51d15314a140c3151a4f",
+      "size_bytes": 116,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/qa/gates.py",
+      "sha256": "ac21f9b75de3f6ff705e54e9a403a402271dea83f5a13d2f23ef0a1ad30940c2",
+      "size_bytes": 4315,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/qa/repair.py",
+      "sha256": "327e5fde1228e64cac9e970f4b61de754e2069beb7de07b64fa9e197ddc0b5cd",
+      "size_bytes": 1637,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/qa/review.py",
+      "sha256": "4d0fbd1d63bdb7f981784a7d424b4c5a04005e203e7b5054a8515791d2ba057c",
+      "size_bytes": 6307,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/__init__.py",
+      "sha256": "c97b243d1dbdc8c56401eaf397039e376f29a41a6352903d3d4930fa52a9b292",
+      "size_bytes": 529,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/analytic.py",
+      "sha256": "b9f4472b8d9180e7ba84c76b5192b7aedc23d106614a097facc3a5d4a6079a10",
+      "size_bytes": 6918,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/analytic_vessel.py",
+      "sha256": "8610abfc6935fb45c78af204d98b2d27a198ff9d5b333c9776be4b0c4307ec0f",
+      "size_bytes": 829,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/blender_uv.py",
+      "sha256": "f00d8c9c9275782fa355587977fa67a3d9316f3732435399e790bfd3d7b2f2d2",
+      "size_bytes": 1714,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/contract.py",
+      "sha256": "f2042963ff489b2967aea2241d1bf228739fd56f8632c318912f9e111766be0a",
+      "size_bytes": 4904,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/hosts.py",
+      "sha256": "8c27494e8a4c19363ba6c5929a9e6757a525c1817bcb4fcf12b38a130a0c653b",
+      "size_bytes": 166,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/mapper.py",
+      "sha256": "1554f17a7c66af34a226af5c69687a346000e2d8f8d4db7457f096151b7a78a4",
+      "size_bytes": 5373,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/math3d.py",
+      "sha256": "cb01ce6fb1786b21fa62171d0dad04b6c6d0f0fc426c5268a1e406acce7844c9",
+      "size_bytes": 3624,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/planar_adapter.py",
+      "sha256": "3637b816e841d9686f8b957c3ac0b113cbd3119988f0ee480f6cc80d42638b59",
+      "size_bytes": 17060,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/qa.py",
+      "sha256": "1715d16da22c3fad1fc348b119aaa399680468b40bc14e3513cc880b121b6d8d",
+      "size_bytes": 6614,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/revolution_vase.py",
+      "sha256": "dc896ff6742f90a748486406d613b58caba52b1fd8b0262d1454541d56532654",
+      "size_bytes": 7399,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/transfer.py",
+      "sha256": "d76eb4156175498148ce6a06138eb81a91cc5fd44703a93697df9dc67c136e8f",
+      "size_bytes": 4115,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/current/surface/uv_mesh.py",
+      "sha256": "4663afd57b98eb1076782177fa1eac97d2fd89db6cb7d6b1e79af1c36a28a4af",
+      "size_bytes": 7895,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/execution.py",
+      "sha256": "70190e383d39c4dde9d4951627865be3c3f4a4c00ea26047102ae40a20e3079c",
+      "size_bytes": 562,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/mock_executor.py",
+      "sha256": "85e6ec282eb7ac4c3744984a9a1ca07a8203c8db7d2625897d086d3427b0b0a3",
+      "size_bytes": 1550,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/models.py",
+      "sha256": "33c2da3e3abe31de29c6b449287f240b3a335b7f6397a2bcaae81777440e7974",
+      "size_bytes": 930,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/motif_migration.py",
+      "sha256": "970b8fd6e536e6d2f92c25ca0e606566b800508dab7ab954d74f6ad77a68a727",
+      "size_bytes": 3779,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/provenance.py",
+      "sha256": "bbf3d72a98e7ed33a76a3a4a171c674d2214d89705a15298d7ee42f8fcc70174",
+      "size_bytes": 2691,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/qa.py",
+      "sha256": "3475477324b2a38f8cfee15a266e1faddae1fab3505c79f03a1f43be2533b924",
+      "size_bytes": 1279,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/serialization.py",
+      "sha256": "aa610d3d004879b9488db14f020591182353281b34af45476c115104d8d07360",
+      "size_bytes": 722,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/__init__.py",
+      "sha256": "0a7d8b2619e0a670246452d871f439dcfcedbf07240276e97ad843e6a7ba3c18",
+      "size_bytes": 81,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/delivery.py",
+      "sha256": "7527d18a5f3f47484fc369dd4d0b0729c0ba24a9bda8ee20ea6e6ed84e1bd1ce",
+      "size_bytes": 3397,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/detail_plan.py",
+      "sha256": "da40932f6934334feab1de3bc753ca3b8549d45f430d85aab7a9affdb323b3a2",
+      "size_bytes": 7781,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/executor.py",
+      "sha256": "d1b1f08bd42b6bb95580067db748dc5259f773c98014eab8264f467ad733cd00",
+      "size_bytes": 4979,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/input.py",
+      "sha256": "fcbd8adc2001256711c77188b29239038573c3d461a62921932f7fcd1e754803",
+      "size_bytes": 4550,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/motifs.py",
+      "sha256": "1cce17c5fa3ca6e4e28bf289f6fad44aa8a19a98d21955adb212f6a5afe5b18d",
+      "size_bytes": 4626,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/plan.py",
+      "sha256": "e089658490f1ee70309488064c43d855107076bccd8173903c17e302d8449fe4",
+      "size_bytes": 11179,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/run.py",
+      "sha256": "05cbd75ea72de3fdcbe6395343783c0e1d94435de2b2c8be8321746dd2224bf3",
+      "size_bytes": 4201,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/showcase/worker.py",
+      "sha256": "5e57ce59976403a5b3c2dc2747a77d4f7a81c0bacc162da34071e706bca8b802",
+      "size_bytes": 31492,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/spec.py",
+      "sha256": "0dc0446cf763527040985a612c9fbfaf20efacfca27ba5ff64692bd8c3a9f62a",
+      "size_bytes": 1550,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/stages.py",
+      "sha256": "19f28d747548a6df5f51446d480c5544c6e0bf04c51fa4a0a7164d5e0ee858c6",
+      "size_bytes": 2974,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/validation.py",
+      "sha256": "b6b40fcfbe1b917f32249029bd3974c0b15ffe17fd8101b0203990361fcbf31f",
+      "size_bytes": 1544,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/runtime/src/ornamentforge/workspace.py",
+      "sha256": "e4d323f6a600d1be48c0f0ba82ba9f8d703a0206fcb7f63ad8ac2aeed075118f",
+      "size_bytes": 5004,
+      "license": "MIT",
+      "category": "runtime-code"
+    },
+    {
+      "path": "scripts/test_input_routes.py",
+      "license": "MIT",
+      "category": "skill-package",
+      "sha256": "1b0576d608e733f91fcc702fb865743f7c57315c1be8b41a8c65127454a06cca",
+      "size_bytes": 5280
+    },
+    {
+      "path": "scripts/test_presentation_finish.py",
+      "sha256": "0697680e6e350f159cee2505b00d78401611964dbb303c71ae73d9dac7e3cdc2",
+      "size_bytes": 3782,
+      "license": "MIT",
+      "category": "tools"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "c8790be74f5b5701ee6180aef9fc20ecf8601f72bdfca8b527071be81287bd30",
+      "size_bytes": 7366,
+      "license": "MIT",
+      "category": "skill-package"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "b34051a7b3e2cbe36d9b6b249e07842a3473877081feef3585a3b1f57c3a3f36",
+      "size_bytes": 6302,
+      "license": "MIT",
+      "category": "third-party-notices"
+    }
+  ],
+  "input_routes": [
+    "Reference → Fidelity → PlanarMaster → SurfaceMap/Craft → Blender",
+    "Prompt → Codex image tool → selected 2D master → Fidelity → PlanarMaster → SurfaceMap/Craft → Blender"
+  ],
+  "bundled_motif_database": false,
+  "protected_core_files_verified": 45
+}

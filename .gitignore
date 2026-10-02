@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.blend
+*.blend[0-9]
+*.zip
+.venv/
+venv/
+env/
+runs/
+output/
+tmp/
+.DS_Store
+Thumbs.db

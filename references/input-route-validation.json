@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-01",
+  "status": "PASS",
+  "checks": {
+    "input_routes": 15,
+    "retained_runtime": 9,
+    "blender_presentation": 1,
+    "skill_validator": 1,
+    "release_integrity": 1
+  },
+  "total": 27,
+  "failures": 0,
+  "skipped": 0,
+  "protected_core_files": 45,
+  "blender_version": "5.1.2",
+  "blender_result": {
+    "source_sha256": "5cadc84c8020dd0c6af9f92bee6fcd58297e9a1485e0e43aae577f638723d955",
+    "geometry_before": "63fa1283c4a15f958ca8231a797dcf9e79c936b61cc44f89c838bee107e376bf",
+    "comparison": "Identical asset/camera/studio/AgX/exposure/samples; material only",
+    "presets": {
+      "QINGBAI_GLAZE": {
+        "preset": "QINGBAI_GLAZE",
+        "version": "2.0.0",
+        "host": "PLATE",
+        "geometry_before": "63fa1283c4a15f958ca8231a797dcf9e79c936b61cc44f89c838bee107e376bf",
+        "geometry_after": "63fa1283c4a15f958ca8231a797dcf9e79c936b61cc44f89c838bee107e376bf",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only"
+          }
+        },
+        "repeat_apply_stable": true,
+        "host_rig_smoke": [
+          "PLATE",
+          "VASE",
+          "CYLINDER"
+        ]
+      },
+      "YINGQING_GLAZE": {
+        "preset": "YINGQING_GLAZE",
+        "version": "2.0.0",
+        "host": "PLATE",
+        "geometry_before": "63fa1283c4a15f958ca8231a797dcf9e79c936b61cc44f89c838bee107e376bf",
+        "geometry_after": "63fa1283c4a15f958ca8231a797dcf9e79c936b61cc44f89c838bee107e376bf",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only"
+          }
+        },
+        "repeat_apply_stable": true,
+        "host_rig_smoke": [
+          "PLATE",
+          "VASE",
+          "CYLINDER"
+        ]
+      }
+    },
+    "status": "PASS",
+    "source_file_unchanged": true,
+    "reopen_geometry_unchanged": true,
+    "visual_review": "REQUIRED"
+  },
+  "live_image_generation_tested": false,
+  "scope": "Tests available in this distribution; no unavailable historical suite claimed",
+  "bundled_motif_database": false
+}

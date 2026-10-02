@@ -1,0 +1,133 @@
+{
+  "schema": "PresentationFinishValidationV2",
+  "version": "2.0.0",
+  "authoritative_source": "shoudai_soft_cloud_v5",
+  "source_files_unchanged": true,
+  "core_files_unchanged": 109,
+  "source_replay": {
+    "preset": "QINGBAI_GLAZE",
+    "version": "2.0.0",
+    "host": "PLATE",
+    "geometry_before": "23be392e3133e048a536564ba8a98b12902e5185ac398fb04525aa614e52a80d",
+    "geometry_after": "23be392e3133e048a536564ba8a98b12902e5185ac398fb04525aa614e52a80d",
+    "geometry_unchanged": true,
+    "pooling": {
+      "basis": "authoritative V5 graph; existing or derived shading attributes",
+      "attributes_added": {}
+    }
+  },
+  "source_replay_pixels": {
+    "mean_absolute_rgb_8bit": 0.0,
+    "max_absolute_rgb_8bit": 0.0,
+    "basis": "same original asset, camera, resolution and seed; source vs replay graph"
+  },
+  "lotus_comparison": {
+    "source_sha256": "753b3263d532aec0958f45df6077fc3526b49d17f8b7282fd40d84709c24b3e9",
+    "geometry_before": "483549f5a4ff688e9120b4ae941a4b0d313c8a1de6e3ccd89967a2ed0908d560",
+    "comparison": "Identical asset/camera/studio/AgX/exposure/samples; material only",
+    "presets": {
+      "QINGBAI_GLAZE": {
+        "preset": "QINGBAI_GLAZE",
+        "version": "2.0.0",
+        "host": "PLATE",
+        "geometry_before": "483549f5a4ff688e9120b4ae941a4b0d313c8a1de6e3ccd89967a2ed0908d560",
+        "geometry_after": "483549f5a4ff688e9120b4ae941a4b0d313c8a1de6e3ccd89967a2ed0908d560",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only",
+            "GlazeHostNormal": "derived shading attribute only",
+            "GlazeRimZone": "derived shading attribute only"
+          }
+        },
+        "repeat_apply_stable": true,
+        "host_rig_smoke": [
+          "PLATE",
+          "VASE",
+          "CYLINDER"
+        ]
+      },
+      "YINGQING_GLAZE": {
+        "preset": "YINGQING_GLAZE",
+        "version": "2.0.0",
+        "host": "PLATE",
+        "geometry_before": "483549f5a4ff688e9120b4ae941a4b0d313c8a1de6e3ccd89967a2ed0908d560",
+        "geometry_after": "483549f5a4ff688e9120b4ae941a4b0d313c8a1de6e3ccd89967a2ed0908d560",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only"
+          }
+        },
+        "repeat_apply_stable": true,
+        "host_rig_smoke": [
+          "PLATE",
+          "VASE",
+          "CYLINDER"
+        ]
+      }
+    },
+    "status": "PASS",
+    "source_file_unchanged": true,
+    "reopen_geometry_unchanged": true,
+    "visual_review": "REQUIRED"
+  },
+  "vessel_reuse": {
+    "status": "PASS",
+    "real_straight_vase": true,
+    "reports": [
+      {
+        "preset": "QINGBAI_GLAZE",
+        "version": "2.0.0",
+        "host": "VASE",
+        "geometry_before": "de04c6253e10801461b2663ece0eababd28ce173e39a018181244476946324bd",
+        "geometry_after": "de04c6253e10801461b2663ece0eababd28ce173e39a018181244476946324bd",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only",
+            "GlazeHostNormal": "derived shading attribute only",
+            "GlazeRimZone": "derived shading attribute only"
+          }
+        }
+      },
+      {
+        "preset": "YINGQING_GLAZE",
+        "version": "2.0.0",
+        "host": "CYLINDER",
+        "geometry_before": "de04c6253e10801461b2663ece0eababd28ce173e39a018181244476946324bd",
+        "geometry_after": "de04c6253e10801461b2663ece0eababd28ce173e39a018181244476946324bd",
+        "geometry_unchanged": true,
+        "pooling": {
+          "basis": "authoritative V5 graph; existing or derived shading attributes",
+          "attributes_added": {
+            "ActualEngravingDepth": "derived shading attribute only",
+            "GlazeCavitySpread": "derived shading attribute only"
+          }
+        }
+      }
+    ]
+  },
+  "visual_review": {
+    "status": "PASS",
+    "observations": "Source replay preserves the supplied gray-cyan soft-cloud glaze, glassy window and rim highlights, and colored shoulder pooling. Same-geometry lotus transfer shows the intended glossy coating, quiet clouds and cyan grooves. No source birds or lotus geometry redesigned.",
+    "limits": "Reference defines finish quality, not identical motif appearance. Fine narrow lotus grooves retain their original shape and sampling; substantially different vessels need visual review."
+  },
+  "artifacts": {
+    "v5_verified\\geometry_qa.json": "9f124bb1b0a465041440c7cfc4b4f16abaed4336d7d0389274790bfb023e100f",
+    "v5_verified\\original_source.png": "29fa0ac4cf6ce3346114e3d51412144e95ca7baf1df9c8042e524fb4cf3a3b29",
+    "v5_verified\\preset_replay.png": "eddda1dab448bbe765ff3032984ce17bbc3c34d0e08edefa8db8f17d2490de3c",
+    "v5_lotus_comparison\\finish_test_qa.json": "6fcada8a97d4d95c81319bc4cd9844b5f3627189fe3e8a3fed133330ec574eb6",
+    "v5_lotus_comparison\\generic_porcelain.png": "c84cde2d4bac40767a7231e3b5317f75925acd86e1c8032d7f49ac6dbc9b2e56",
+    "v5_lotus_comparison\\QINGBAI_GLAZE.png": "7c37a0c0e00d32753c02b5032c2b93688d945ce5cee02768f9de49a112374051",
+    "v5_lotus_comparison\\YINGQING_GLAZE.png": "3d10fb5eac44fa3dfecc2c7b58ac64924afaf042133e456c1e52c6b4ef076c37"
+  },
+  "skill_validator": "PASS",
+  "source_artwork_bundled": false
+}
