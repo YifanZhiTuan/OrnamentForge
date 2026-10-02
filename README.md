@@ -3,7 +3,7 @@
 > 面向 Codex 的复杂传统纹饰 3D 建模 Skill  
 > **参考图 / 一句话描述 → 二维纹饰 → 可编辑 Blender 资产**
 
-OrnamentForge 是「一番纸团 / YifanZhiTuan」开发的复杂纹饰数字化建模 Skill。
+OrnamentForge 是「一番纸团 / PaperBall」开发的复杂纹饰数字化建模 Skill。
 
 它不是单纯生成一张纹样图片，而是尝试把传统纹饰进一步转化为可编辑、可映射、可继续建模和二次创作的 Blender 3D 资产。
 
@@ -672,7 +672,7 @@ V1 当前核心只有两种用户入口：
 
 # 关于项目
 
-OrnamentForge 是「一番纸团 / YifanZhiTuan」复杂纹饰数字化方向的实验性开源项目。
+OrnamentForge 是「一番纸团 / PaperBall」复杂纹饰数字化方向的实验性开源项目。
 
 它想探索的是：
 
@@ -691,7 +691,7 @@ OrnamentForge 是「一番纸团 / YifanZhiTuan」复杂纹饰数字化方向的
 
 # 项目作者
 
-**OrnamentForge** 由 **一番纸团 / YifanZhiTuan** 开发并维护。
+**OrnamentForge** 由 **一番纸团 / PaperBall** 开发并维护。
 
 如果你在使用过程中遇到问题、发现 Bug，或者有新的纹饰建模需求，欢迎通过 GitHub Issue 反馈。
 
@@ -728,6 +728,6 @@ V1 的重点不是覆盖所有 3D 建模场景，而是先把下面两条核心�
 
 ---
 
-**Created by 一番纸团 / YifanZhiTuan**
+**Created by 一番纸团 / PaperBall**
 
 **OrnamentForge v1.0.0**
