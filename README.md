@@ -5,48 +5,6 @@
 
 OrnamentForge 是「一番纸团 / YifanZhiTuan」开发的复杂纹饰数字化建模 Skill。
 
-它不是单纯生成一张纹样图片，而是尝试把传统纹饰进一步转化为：
-
-- 可编辑
-- 可映射
-- 可继续建模
-- 可继续二次创作
-
-的 Blender 3D 资产。
-
-当前 V1 主要面向：
-
-- 中国传统纹饰
-- 陶瓷刻花 / 阴刻
-- 浅浮雕 / 浮雕
-- 彩绘陶瓷
-- 连续装饰纹样
-- 瓷盘、陶瓷杯、简单旋转体花瓶、平面载体等
-
-核心工作流：
-
-```text
-参考图 / 自然语言
-        ↓
-二维纹饰母版
-        ↓
-Fidelity Reconstruction
-        ↓
-PlanarMaster
-        ↓
-SurfaceMap / Craft
-        ↓
-Blender 可编辑资产
-可以，下面就是**完整可直接复制进 `README.md` 的版本**：
-
-```markdown
-# OrnamentForge
-
-> 面向 Codex 的复杂传统纹饰 3D 建模 Skill  
-> **参考图 / 一句话描述 → 二维纹饰 → 可编辑 Blender 资产**
-
-OrnamentForge 是「一番纸团 / YifanZhiTuan」开发的复杂纹饰数字化建模 Skill。
-
 它不是单纯生成一张纹样图片，而是尝试把传统纹饰进一步转化为可编辑、可映射、可继续建模和二次创作的 Blender 3D 资产。
 
 当前 V1 主要面向：
