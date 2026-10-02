@@ -34,24 +34,30 @@ Blender 可编辑资产
 
 ---
 ## 效果展示
-
-<p align="center">
-  <img src="docs/images/painted-phoenix-peony-plate.png" width="48%" />
-  <img src="docs/images/blue-white-lotus-medallion-plate.jpg" width="48%" />
-</p>
-
-<p align="center">
-  <img src="docs/images/blue-phoenix-line-relief-plate.jpg" width="48%" />
-  <img src="docs/images/qingbai-bird-flower-engraved-plate.png" width="48%" />
-</p>
-
-<p align="center">
-  彩绘凤凰牡丹盘 · 蓝白莲花团花盘 · 凤凰线性浮雕盘 · 青白瓷花鸟刻花盘
-</p>
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/images/painted-phoenix-peony-plate.png" width="100%" /><br/>
+      <b>彩绘凤凰牡丹盘</b>
+    </td>
+    <td align="center">
+      <img src="docs/images/blue-white-lotus-medallion-plate.jpg" width="100%" /><br/>
+      <b>蓝白莲花团花盘</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/images/blue-phoenix-line-relief-plate.jpg" width="100%" /><br/>
+      <b>凤凰线性浮雕盘</b>
+    </td>
+    <td align="center">
+      <img src="docs/images/qingbai-bird-flower-engraved-plate.png" width="100%" /><br/>
+      <b>青白瓷花鸟刻花盘</b>
+    </td>
+  </tr>
+</table>
 ---
 # 1. 功能
-
 ## 1.1 参考图建模
 
 如果用户已经有纹样参考图，OrnamentForge 会优先按照参考图进行重建，而不是重新设计。
