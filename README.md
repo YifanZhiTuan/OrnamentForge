@@ -20,56 +20,16 @@ vases, and planar surfaces.
 
 ## Showcase
 
-```{=html}
-<table>
-```
-```{=html}
-<tr>
-```
-```{=html}
-<td align="center">
-```
-`<img src="docs/images/painted-phoenix-peony-plate.png" width="100%" alt="Painted phoenix-and-peony ceramic plate" />`{=html}`<br/>`{=html}`<b>`{=html}Painted
-Phoenix-and-Peony Plate`</b>`{=html}
-```{=html}
-</td>
-```
-```{=html}
-<td align="center">
-```
-`<img src="docs/images/blue-white-lotus-medallion-plate.jpg" width="100%" alt="Blue-and-white lotus medallion plate" />`{=html}`<br/>`{=html}`<b>`{=html}Blue-and-White
-Lotus Medallion Plate`</b>`{=html}
-```{=html}
-</td>
-```
-```{=html}
-</tr>
-```
-```{=html}
-<tr>
-```
-```{=html}
-<td align="center">
-```
-`<img src="docs/images/blue-phoenix-line-relief-plate.jpg" width="100%" alt="Phoenix line-relief plate" />`{=html}`<br/>`{=html}`<b>`{=html}Phoenix
-Line-Relief Plate`</b>`{=html}
-```{=html}
-</td>
-```
-```{=html}
-<td align="center">
-```
-`<img src="docs/images/qingbai-bird-flower-engraved-plate.png" width="100%" alt="Qingbai engraved bird-and-flower plate" />`{=html}`<br/>`{=html}`<b>`{=html}Qingbai
-Engraved Bird-and-Flower Plate`</b>`{=html}
-```{=html}
-</td>
-```
-```{=html}
-</tr>
-```
-```{=html}
-</table>
-```
+| Painted Phoenix-and-Peony Plate                                                         | Blue-and-White Lotus Medallion Plate                                                      |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| ![Painted phoenix-and-peony ceramic plate](docs/images/painted-phoenix-peony-plate.png) | ![Blue-and-white lotus medallion plate](docs/images/blue-white-lotus-medallion-plate.jpg) |
+| **Painted Phoenix-and-Peony Plate**                                                     | **Blue-and-White Lotus Medallion Plate**                                                  |
+
+| Phoenix Line-Relief Plate                                                         | Qingbai Engraved Bird-and-Flower Plate                                                                       |
+|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| ![Blue phoenix line-relief plate](docs/images/blue-phoenix-line-relief-plate.jpg) | ![Qingbai ceramic plate engraved with birds and flowers](docs/images/qingbai-bird-flower-engraved-plate.png) |
+| **Phoenix Line-Relief Plate**                                                     | **Qingbai Engraved Bird-and-Flower Plate**                                                                   |
+
 ## Workflow
 
 ``` text
@@ -147,9 +107,9 @@ rather than force an unreliable result.
 
 ### Requirements
 
--   Python 3.11+
--   Blender 4.2+
--   Codex
+- Python 3.11+
+- Blender 4.2+
+- Codex
 
 The main validation environment includes Blender 5.1.2.
 
@@ -309,15 +269,15 @@ painting and relief
 
 OrnamentForge uses separate licenses for different parts of the project.
 
--   **Code and documentation:** primarily licensed under the MIT
-    License. See [`LICENSE`](LICENSE).
--   **Original patterns and reusable assets:** assets explicitly
-    identified as original OrnamentForge work and approved for
-    redistribution use the Creative Commons Attribution 4.0
-    International (CC BY 4.0) license. Attribution is required. See
-    [`LICENSE-ASSETS.md`](LICENSE-ASSETS.md).
--   **Third-party dependencies:** remain subject to their respective
-    licenses. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+- **Code and documentation:** primarily licensed under the MIT License.
+  See [`LICENSE`](LICENSE).
+- **Original patterns and reusable assets:** assets explicitly
+  identified as original OrnamentForge work and approved for
+  redistribution use the Creative Commons Attribution 4.0 International
+  (CC BY 4.0) license. Attribution is required. See
+  [`LICENSE-ASSETS.md`](LICENSE-ASSETS.md).
+- **Third-party dependencies:** remain subject to their respective
+  licenses. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 The repository's licenses do not automatically cover external ArtLibrary
 references, third-party ornamental images, user-uploaded references, AI
@@ -354,5 +314,5 @@ ornament-modeling use case, feel free to open a GitHub Issue.
 
 ------------------------------------------------------------------------
 
-**Created by Yifan Zhi Tuan / PaperBall (一番纸团)**\
+**Created by Yifan Zhi Tuan / PaperBall (一番纸团)**  
 **OrnamentForge v1.0.0**
