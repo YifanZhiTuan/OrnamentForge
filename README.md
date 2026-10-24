@@ -6,7 +6,7 @@
 > Reference image or text prompt → 2D ornament design → editable Blender
 > asset
 
-[English](README.md) \| [简体中文](README.zh-CN.md)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
 OrnamentForge is an experimental open-source project by **Yifan Zhi Tuan
 / PaperBall (一番纸团)**. It explores how intricate ornamental designs
@@ -20,19 +20,17 @@ vases, and planar surfaces.
 
 ## Showcase
 
-| Painted Phoenix-and-Peony Plate                                                         | Blue-and-White Lotus Medallion Plate                                                      |
-|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Painted Phoenix-and-Peony Plate | Blue-and-White Lotus Medallion Plate |
+|:---:|:---:|
 | ![Painted phoenix-and-peony ceramic plate](docs/images/painted-phoenix-peony-plate.png) | ![Blue-and-white lotus medallion plate](docs/images/blue-white-lotus-medallion-plate.jpg) |
-| **Painted Phoenix-and-Peony Plate**                                                     | **Blue-and-White Lotus Medallion Plate**                                                  |
 
-| Phoenix Line-Relief Plate                                                         | Qingbai Engraved Bird-and-Flower Plate                                                                       |
-|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| ![Blue phoenix line-relief plate](docs/images/blue-phoenix-line-relief-plate.jpg) | ![Qingbai ceramic plate engraved with birds and flowers](docs/images/qingbai-bird-flower-engraved-plate.png) |
-| **Phoenix Line-Relief Plate**                                                     | **Qingbai Engraved Bird-and-Flower Plate**                                                                   |
+| Phoenix Line-Relief Plate | Qingbai Engraved Bird-and-Flower Plate |
+|:---:|:---:|
+| ![Phoenix line-relief plate](docs/images/blue-phoenix-line-relief-plate.jpg) | ![Qingbai engraved bird-and-flower plate](docs/images/qingbai-bird-flower-engraved-plate.png) |
 
 ## Workflow
 
-``` text
+```text
 Reference Image or Natural-Language Prompt
                     ↓
              2D Ornament Design
@@ -123,7 +121,7 @@ git clone https://github.com/YifanZhiTuan/OrnamentForge.git .agents/skills/ornam
 
 Then invoke the Skill in Codex:
 
-``` text
+```text
 $ornamentforge
 ```
 
@@ -165,7 +163,7 @@ task.
 
 ### With a Reference Image
 
-``` text
+```text
 Use $ornamentforge.
 
 Turn the uploaded reference into ceramic engraving.
@@ -177,7 +175,7 @@ Export an editable Blender file and final renders.
 
 ### Without a Reference Image
 
-``` text
+```text
 Use $ornamentforge.
 
 Create an engraved qingbai porcelain vase featuring two dragons
@@ -190,7 +188,7 @@ Export an editable Blender file and final renders.
 
 **Dragon-and-pearl vase**
 
-``` text
+```text
 Use $ornamentforge.
 
 Create an engraved qingbai porcelain vase with two dragons circling
@@ -201,7 +199,7 @@ Export an editable Blender file and front, three-quarter, and detail renders.
 
 **Lotus medallion plate**
 
-``` text
+```text
 Use $ornamentforge.
 
 Create a qingbai porcelain plate with a lotus medallion. Place a lotus
@@ -213,7 +211,7 @@ Use shallow engraving and export the Blender file and final renders.
 
 **Repeating cloud-motif cup**
 
-``` text
+```text
 Use $ornamentforge.
 
 Create a qingbai ceramic cup with a continuous cloud pattern around the
@@ -224,7 +222,7 @@ Use shallow engraving and export the Blender file and final renders.
 
 **Colorful pattern to relief**
 
-``` text
+```text
 Use $ornamentforge.
 
 Turn the uploaded colorful pattern into ceramic relief. Preserve its
@@ -291,7 +289,7 @@ original sources and applicable permissions.
 
 Version 1 focuses on two core entry points:
 
-``` text
+```text
 Reference Image → Fidelity Reconstruction → 3D Asset
 
 Natural-Language Prompt → AI Ornament Design
