@@ -20,13 +20,28 @@ vases, and planar surfaces.
 
 ## Showcase
 
-| Painted Phoenix-and-Peony Plate | Blue-and-White Lotus Medallion Plate |
-|:---:|:---:|
-| ![Painted phoenix-and-peony ceramic plate](docs/images/painted-phoenix-peony-plate.png) | ![Blue-and-white lotus medallion plate](docs/images/blue-white-lotus-medallion-plate.jpg) |
-
-| Phoenix Line-Relief Plate | Qingbai Engraved Bird-and-Flower Plate |
-|:---:|:---:|
-| ![Phoenix line-relief plate](docs/images/blue-phoenix-line-relief-plate.jpg) | ![Qingbai engraved bird-and-flower plate](docs/images/qingbai-bird-flower-engraved-plate.png) |
+<table width="100%">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><strong>Painted Phoenix-and-Peony Plate</strong></p>
+      <img src="docs/images/painted-phoenix-peony-plate.png" width="100%" alt="Painted phoenix-and-peony ceramic plate" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><strong>Blue-and-White Lotus Medallion Plate</strong></p>
+      <img src="docs/images/blue-white-lotus-medallion-plate.jpg" width="100%" alt="Blue-and-white lotus medallion ceramic plate" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><strong>Phoenix Line-Relief Plate</strong></p>
+      <img src="docs/images/blue-phoenix-line-relief-plate.jpg" width="100%" alt="Blue phoenix line-relief plate" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><strong>Qingbai Engraved Bird-and-Flower Plate</strong></p>
+      <img src="docs/images/qingbai-bird-flower-engraved-plate.png" width="100%" alt="Qingbai engraved bird-and-flower plate" />
+    </td>
+  </tr>
+</table>
 
 ## Workflow
 
