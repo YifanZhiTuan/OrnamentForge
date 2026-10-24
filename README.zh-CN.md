@@ -1,5 +1,6 @@
 # OrnamentForge
 
+[English](README.md) | [简体中文](README.zh-CN.md)
 > 面向 Codex 的复杂传统纹饰 3D 建模 Skill  
 > **参考图 / 一句话描述 → 二维纹饰 → 可编辑 Blender 资产**
 
